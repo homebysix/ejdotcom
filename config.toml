@@ -1,3 +1,57 @@
-baseURL = "http://example.org/"
+title = "Elliot Jordan"
+baseURL = "https://www.elliotjordan.com/" # include trailing slash
 languageCode = "en-us"
-title = "My New Hugo Site"
+author = "Elliot Jordan"
+theme = "cocoa-ej"
+pygmentsCodeFences = true
+# PygmentsStyle = "default"
+disableKinds = ["RSS", "taxonomyTerm"]
+googleAnalytics = "UA-286289-7"
+
+[taxonomies]
+    tag = "tags"
+
+[permalinks]
+    posts = "/posts/:slug/"
+
+[params]
+    dateform = "Jan 2, 2006"
+    dateformfull = "Mon Jan 2 2006 15:04:05 MST"
+    description = "The website of Elliot Jordan."
+    copyright = "© 2004-{year} Elliot&nbsp;Jordan"
+    logofile = "/img/logo.svg"
+    faviconfile = "/favicon.ico"
+    highlightjs = true
+    progressively = false
+    lazyimg = true
+    share = false
+    latestpostcount = 5
+    usesmallsummarycard = true
+    posts_navigation = true
+    small_banner_logo = false
+    show_site_title = false
+    # githubRepo = "homebysix/ejdotcom"
+
+[params.colors]
+    identifier = "#527fc1"
+    identifier_darkmode = "#ccc"
+    identifier_muted = "#1a3152"
+    identifier_muted_darkmode = "#ccc"
+    trivial = "#000"
+    trivial_darkmode = "#ccc"
+    foreground = "#333"
+    foreground_darkmode = "#ccc"
+    background = "#eee"
+    background_darkmode = "#0A0A0B"
+    background_muted = "#333"
+    background_muted_darkmode = "#0A0A0B"
+    code = "#87a5d2"
+    code_darkmode = "#ccc"
+    type = "#87a5d2"
+    type_darkmode = "#87a5d2"
+    special = "#ffcb8d"
+    special_darkmode = "#ffcb8d"
+    value = "#87a5d2"
+    value_darkmode = "#87a5d2"
+    statement = "#ff8e91"
+    statement_darkmode = "#ff8e91"
