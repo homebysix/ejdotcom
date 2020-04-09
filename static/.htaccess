@@ -1,9 +1,0 @@
-RewriteEngine On
-
-# Redirect old pages to home
-RewriteRule ^husband(.*)$ /$1 [R=301,NC,L]
-RewriteRule ^consultant(.*)$ /$1 [R=301,NC,L]
-RewriteRule ^traveler(.*)$ /$1 [R=301,NC,L]
-RewriteRule ^designer(.*)$ /$1 [R=301,NC,L]
-RewriteRule ^photographer(.*)$ /$1 [R=301,NC,L]
-RewriteRule ^sftour(.*)$ /$1 [R=301,NC,L]
