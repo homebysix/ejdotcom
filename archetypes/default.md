@@ -6,10 +6,6 @@ slug: {{ .Name }}
 draft: true
 tags:
     - macadmin
-references:
-    - title: "Example.com"
-      url: https://www.example.com
-      description: "An example website."
 ---
 
 <!--
