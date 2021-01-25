@@ -1,6 +1,6 @@
 ---
 title: "You Might Like MunkiPkg"
-date: 2021-01-24T17:00:00-08:00
+date: 2021-01-24T16:30:00-08:00
 slug: munkipkg-01-intro
 description: Introduction to MunkiPkg, an overview of its best suited use cases, and a simple walkthrough for your first project.
 tags:
