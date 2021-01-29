@@ -38,7 +38,7 @@ MunkiPkg is a Python script, so my preferred way of "installing" it is to clone 
 Cloning the Git repo instead of just downloading the script itself ensures that you can use `git pull` to get the latest changes when MunkiPkg is updated in the future.
 
 {{< admonition note "note" >}}
-    The steps below use <em>~/Developer</em> to store your sources, but feel free to change to <em>~/src</em>, <em>~/Documents</em>, or wherever you store your source code.
+    The steps below use <em>~/Developer</em> to store your sources, but you should adjust that path to wherever you store your source code.
 {{< /admonition >}}
 
 1. Clone the MunkiPkg project from GitHub.
