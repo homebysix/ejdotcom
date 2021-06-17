@@ -34,7 +34,7 @@ params:
   small_banner_logo: false
   show_site_title: false
   githubRepo: "homebysix/ejdotcom"
-  gitBranch: master
+  gitBranch: main
 
   colors:
     identifier: "#527fc1"
