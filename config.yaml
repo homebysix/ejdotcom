@@ -4,7 +4,7 @@ languageCode: "en-us"
 author: "Elliot Jordan"
 theme: "cocoa-ej"
 pygmentsCodeFences: true
-# PygmentsStyle: "default"
+PygmentsStyle: "emacs"
 # disableKinds: ["RSS"]
 googleAnalytics: "UA-286289-7"
 
@@ -24,7 +24,7 @@ params:
   copyright: "© 2004-{year} Elliot&nbsp;Jordan"
   logofile: "/img/logo.svg"
   faviconfile: "/favicon.ico"
-  highlightjs: true
+  highlightjs: false
   progressively: false
   lazyimg: true
   share: false
@@ -34,7 +34,7 @@ params:
   small_banner_logo: false
   show_site_title: false
   githubRepo: "homebysix/ejdotcom"
-  gitBranch: master
+  gitBranch: main
 
   colors:
     identifier: "#527fc1"
