@@ -148,11 +148,23 @@ How often you update the hooks (and whether you update at all) is entirely up to
 
 ## Testing all files
 
-For file-based checks, the only files checked are the ones modified by your commit. You may find it useful to force pre-commit to check _all_ files in your repo once, separate from any Git commit. For this, use:
+For file-based checks, the only files checked are the ones modified by your commit. You may find it useful to force pre-commit to check _all_ files in your repo once, separate from any Git commit. This is great for testing that your code still passes all checks after updating the hooks with `autoupdate`, or after adding new hooks to your config. Use this command:
 
-    pre-commit run --all-files
+```
+pre-commit run --all-files
+```
 
-This is great for testing that your code still passes all checks after updating the hooks with `autoupdate`.
+You'll see output indicating hooks' status: "Passed," "Skipped," or "Failed."
+
+<pre>
+black....................................................<span style="background-color: lightgreen;">Passed</span>
+Check Yaml...............................................<span style="background-color: lightgreen;">Passed</span>
+Check JSON...........................(no files to check)<span style="background-color: lightblue;">Skipped</span>
+Don't commit to branch...................................<span style="background-color: pink;">Failed</span>
+- hook id: no-commit-to-branch
+- exit code: 1
+Trim Trailing Whitespace.................................<span style="background-color: lightgreen;">Passed</span>
+</pre>
 
 ## Skipping hooks
 
