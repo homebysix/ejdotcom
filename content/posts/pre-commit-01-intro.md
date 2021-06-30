@@ -44,45 +44,57 @@ The `no-commit-to-branch` hook proves valuable if your team's Git host settings 
 
 1. First, [install pre-commit](https://pre-commit.com/#install). I choose to do this with [Homebrew](https://brew.sh/):
 
-        brew install pre-commit
+    ```
+    brew install pre-commit
+    ```
 
 1. Next, create a _.pre-commit-config.yaml_ file (note the leading dot) at the root of your Git repo with the following contents:
 
-        repos:
-          - repo: https://github.com/pre-commit/pre-commit-hooks
-            rev: v3.4.0
-            hooks:
-              - id: no-commit-to-branch
+    ```yaml
+    repos:
+      - repo: https://github.com/pre-commit/pre-commit-hooks
+        rev: v3.4.0
+        hooks:
+          - id: no-commit-to-branch
+    ```
 
     Note that as of this post, `master` is the default branch that the hook checks for. If your default branch is named differently, you can specify a `--branch` argument with the desired branch name(s), like so:
 
-        repos:
-          - repo: https://github.com/pre-commit/pre-commit-hooks
-            rev: v3.4.0
-            hooks:
-              - id: no-commit-to-branch
-                args: [--branch, main]
+    ```yaml
+    repos:
+      - repo: https://github.com/pre-commit/pre-commit-hooks
+        rev: v3.4.0
+        hooks:
+          - id: no-commit-to-branch
+            args: [--branch, main]
+    ```
 
 1. Finally, navigate to your Git repo and activate the hooks:
 
-        cd ~/Developer/your_git_repo
-        pre-commit install
+    ```
+    cd ~/Developer/your_git_repo
+    pre-commit install
+    ```
 
 That's it! From now on, the `no-commit-to-branch` hook will run prior to every `git commit` you do. If you're not on a protected branch, your commit will succeed:
 
-    % git branch --show-current
-    test
-    % git commit -m "This commit should succeed"
-    Don't commit to branch...................................................Passed
+```
+% git branch --show-current
+test
+% git commit -m "This commit should succeed"
+Don't commit to branch...................................................Passed
+```
 
 If you are on a protected branch, the hook will fail and the commit will halt, giving you an opportunity to switch branches and try again.
 
-    % git branch --show-current
-    main
-    % git commit -m "This commit should fail"
-    Don't commit to branch...................................................Failed
-    - hook id: no-commit-to-branch
-    - exit code: 1
+```
+% git branch --show-current
+main
+% git commit -m "This commit should fail"
+Don't commit to branch...................................................Failed
+- hook id: no-commit-to-branch
+- exit code: 1
+```
 
 The hooks will also affect commits issued by GUI apps like [GitHub Desktop](https://desktop.github.com/) or [Fork](https://fork.dev/):
 
@@ -94,27 +106,31 @@ To add more hooks to your repo, edit the _.pre-commit-config.yaml_ file with the
 
 Additional hooks from the same repository can be added to the existing `hooks` list, as shown with the `check-merge-conflict` hook below:
 
-    repos:
-      - repo: https://github.com/pre-commit/pre-commit-hooks
-        rev: v3.4.0
-        hooks:
-          - id: no-commit-to-branch
-            args: [--branch, main]
-          - id: check-merge-conflict
+```yaml
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v3.4.0
+    hooks:
+      - id: no-commit-to-branch
+        args: [--branch, main]
+      - id: check-merge-conflict
+```
 
 You can add hooks from a different repository by supplying the repo's URL and desired tag/revision to use, as shown with the `black` repo and hook below:
 
-    repos:
-      - repo: https://github.com/pre-commit/pre-commit-hooks
-        rev: v3.4.0
-        hooks:
-          - id: no-commit-to-branch
-            args: [--branch, main]
-          - id: check-merge-conflict
-      - repo: https://github.com/python/black
-        rev: 20.8b1
-        hooks:
-          - id: black
+```yaml
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v3.4.0
+    hooks:
+      - id: no-commit-to-branch
+        args: [--branch, main]
+      - id: check-merge-conflict
+  - repo: https://github.com/python/black
+    rev: 20.8b1
+    hooks:
+      - id: black
+```
 
 Each time you modify the _.pre-commit-config.yaml_ file, commit the file to your repository as you would any other changes.
 
@@ -124,7 +140,9 @@ Pre-commit hook authors occasionally make changes and fix bugs in their hooks, a
 
 New revisions/tags can be specified manually by changing the `rev` value in your config. However, it's much easier to use the following command to automatically update all hooks in your configuration to the latest available version:
 
-    pre-commit autoupdate
+```
+pre-commit autoupdate
+```
 
 How often you update the hooks (and whether you update at all) is entirely up to you. Personally, I try to remember to run `autoupdate` on my Git repos once every few months, or when I encounter issues with the hooks themselves. [Here's an example](https://github.com/homebysix/docklib/commit/969a0cb337052ce95d935a997a3c522fd11228dd) of the result of running `autoupdate` on one of my projects.
 
@@ -140,7 +158,9 @@ This is great for testing that your code still passes all checks after updating 
 
 If you ever need to bypass the pre-commit hooks (for example, to issue a one-time commit to a protected local branch), you can use the `-n` or `--no-verify` flag when committing.
 
-    git commit -nm "This commit should succeed"
+```
+git commit -nm "This commit should succeed"
+```
 
 {{< admonition note "Remote rules still apply" >}}
 Skipping pre-commit hooks locally does not bypass your Git remote host settings. For example, if you have your Git host configured to prohibit pushes to the default branch, or if you have pre-commit configured to run on CI/CD pipelines, bypassing local hooks with <code>-n</code> may not achieve what you want.
