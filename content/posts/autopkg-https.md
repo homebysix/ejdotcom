@@ -1,5 +1,5 @@
 ---
-title: "Switch AutoPkg Recipes to HTTPS"
+title: "Switch AutoPkg recipes to HTTPS"
 date: 2021-01-01T10:00:00-07:00
 slug: autopkg-https
 tags:
