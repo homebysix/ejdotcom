@@ -2,6 +2,7 @@
 title: "Switch AutoPkg recipes to HTTPS"
 date: 2021-01-01T10:00:00-07:00
 slug: autopkg-https
+description: A script that helps AutoPkg recipe authors use HTTPS in download recipes, and context about why using HTTPS is important.
 tags:
     - autopkg
     - macadmin
