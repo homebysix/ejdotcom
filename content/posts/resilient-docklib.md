@@ -487,7 +487,7 @@ Recently I've switched to a more thorough introspection of the current Dock cont
 
 This script stores a list of all the apps that have been present in modern macOS default Docks. If the current Dock consists _solely_ of items in that list, the Dock is probably safe to alter in my estimation.
 
-```py {linenos=table, hl_lines=["14-20", "30-34", "43-44", "53-56"], linenostart=1}
+```py {linenos=table, hl_lines=["12-19", "29-33", "42-43", "52-55"], linenostart=1}
 #!/usr/local/bin/managed_python3
 
 import os
@@ -500,7 +500,6 @@ def is_default(dock):
     """Return True if the dock is uncustomized from macOS default, or False otherwise."""
 
     # List of default Dock items from recent versions of macOS
-    # Source: https://512pixels.net/projects/aqua-screenshot-library/
     apple_default_apps = [
         "App Store", "Calendar", "Contacts", "FaceTime", "Finder", "iBooks",
         "iCal", "iTunes", "Keynote", "Launchpad", "Mail", "Maps", "Messages",
@@ -557,9 +556,11 @@ if __name__ == "__main__":
 
 Of course, some holes exist in this logic: What if somebody genuinely only uses Apple's first-party apps for everything, and their customized Dock is very close to the default? What if somebody removes _every_ app from their Dock, preferring it to be empty? These edge cases can be handled in the code if desired, but so far I've chosen not to.
 
-I'll also call attention to lines 26-29 of the above code for a moment:
+Additionally, the above approach requires a bit of maintenance: administrators to pay attention to new macOS releases and add new default apps to the `apple_default_apps` list as needed.
 
-```py {linenos=table, linenostart=26}
+I'd like to call attention to lines 25-28 of the above code for a moment:
+
+```py {linenos=table, linenostart=25}
             # Compare the path, not the label, due to localization
             pathurl = item["tile-data"]["file-data"]["_CFURLString"]
             path = urlparse(unquote(pathurl)).path.rstrip("/")
