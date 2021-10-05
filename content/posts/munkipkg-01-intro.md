@@ -149,7 +149,7 @@ It's rare that a single tool will satisfy all possible scenarios, and MunkiPkg i
 
 ## Further Reading
 
-I'll be returning to the topic of MunkiPkg in the future. Until then, here are a few articles and resources about MunkiPkg:
+I'll be returning to the [topic of MunkiPkg](/tags/munkipkg) in the future. Until then, here are a few articles and resources about MunkiPkg:
 
 - Greg Neagle: [Introducing MunkiPkg](https://managingosx.wordpress.com/2015/07/28/introducing-munkipkg/)
 - REDline: [Using MunkiPkg](https://redlinetech.wordpress.com/2015/07/31/using-munki-pkg/)
