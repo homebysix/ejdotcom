@@ -56,7 +56,7 @@ MunkiPkg excels at creating these types of lightweight, purpose-specific configu
 
 One recurring task many Mac admins use MunkiPkg for is the creation of installers for [Outset](https://github.com/chilcote/outset) scripts, and the above principle applies there too. Deploying an installer for your Outset script(s) separate from the Outset installer itself makes it easier to update each in the future.
 
-<!-- TODO: Link to package granularity section of deploying-docklib post, once it's published. -->
+(For an example of a MunkiPkg project for a docklib script, see [this post](../docklib-outset/).)
 
 ## Be Git-Friendly
 
