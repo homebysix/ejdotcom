@@ -68,8 +68,6 @@ Before you start creating your script, it's a good idea to create an environment
 
 You'll need to ensure your test Mac has Python 3 and the docklib module installed. Numerous ways exist to meet this requirement, but my go-to advice for most admins is to install the [MacAdmins Python "recommended" package](https://github.com/macadmins/python/releases), which includes docklib. With this package installed on your test Mac, you can use the symlink at `/usr/local/bin/managed_python3` as your Python 3 interpreter.
 
-<!-- TODO: If I write a post about deploying MacAdmins Python 3 via Jamf/Munki, cross link from here. -->
-
 Let's run through a rudimentary test of our ability to back up, make a Dock change, and restore.
 
 1. Back up your test Mac's Dock configuration with this Terminal command:
@@ -94,7 +92,7 @@ Let's run through a rudimentary test of our ability to back up, make a Dock chan
     ```sh
     chmod +x ~/Desktop/dock_script.py
     ```
-    
+
 1. Run the script:
 
     ```sh
@@ -742,8 +740,6 @@ If you use a custom LaunchAgent to trigger your Dock script, you can define the 
 
 At last, here's a fully-featured example docklib script that incorporates many of the resilience tips demonstrated above. Feel free to use this script as a launching-off point for your own Dock customization adventures.
 
-Once your script is working as expected on your test Mac, the next step would be to test and deploy it (along with any required frameworks like Outset and Python 3) on your endpoint Macs. I may write more on that process in the future.
-
-<!-- TODO: If I write a post about deploying MacAdmins Python 3 via Jamf/Munki, cross link from here. -->
+Once your script is working as expected on your test Mac, the next step would be to test and deploy it (along with any required frameworks like Outset and Python 3) on your endpoint Macs. I've written [another post](../docklib-outset/) that describes that process.
 
 {{% gist homebysix 077b373264a101d84a3f8cb48e9bca84 %}}
