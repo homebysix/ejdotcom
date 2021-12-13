@@ -27,4 +27,7 @@ weight: 10
 - **[Pre-Commit Hooks for MacAdmins](https://github.com/homebysix/pre-commit-macadmin)**  
     Hooks that Mac admins can use with pre-commit to lint common files.
 
+- **[ProfileManifestsMirror](https://github.com/Jamf-Custom-Profile-Schemas/ProfileManifestsMirror)**  
+    An extensive collection of MDM profile manifests in JSON format for use with Jamf. (See details in [this post](../../posts/profilemanifestsmirror).)
+
 You can find a few other projects on [my GitHub](https://github.com/homebysix).
