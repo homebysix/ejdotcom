@@ -1,6 +1,6 @@
 ---
 title: "ProfileCreator Manifests Now Available for Jamf"
-date: 2021-12-15T00:00:00-08:00
+date: 2021-12-16T19:00:00-08:00
 description: Introducing a mirror of the ProfileManifests repository in JSON schema format, which provides Jamf administrators access to an extensive collection of manifests that can be used with the custom manifest feature of Jamf.
 slug: profilemanifestsmirror
 tags:
@@ -24,7 +24,7 @@ After diving deep into the documentation available on each format, reviewing doz
 
 My primary goal for this repository is to give administrators a head start when creating new profiles for apps and domains already included in the extensive ProfileManifests collection.
 
-A secondary goal is to spread awareness of the upstream ProfileManifests repository, so the collection can continue growing to include more apps and stay up to date with changes to existing settings. Focusing contribution energy on this upstream repository benefits everybody in the Mac admin community, not just those using Jamf.
+A secondary goal is to spread awareness of the upstream [ProfileManifests](https://github.com/ProfileCreator/ProfileManifests) repository, so the collection can continue growing to include more apps and stay up to date with changes to existing settings. Focusing contribution energy on this upstream repository benefits everybody in the Mac admin community, including but not limited to those using Jamf.
 
 Finally, I enjoyed having an excuse to build my first useful workflow in GitHub Actions. I found it very approachable, and now I'm looking for ways to use Actions in my other projects.
 
@@ -67,7 +67,7 @@ As you can see, the visual menus and fields provided by custom profile manifests
 
 ## Contributing to manifests
 
-As you use these manifests, you may encounter specific settings or entire domains that are absent from the ProfileManifests repository. When this happens to you, I would strongly encourage you to submit a [pull request](https://github.com/ProfileCreator/ProfileManifests/pulls) to the upstream ProfileManifests repository that adds the missing pieces for the benefit of everyone. ([This pull request](https://github.com/ProfileCreator/ProfileManifests/pull/335/files) that adds a manifest for Handbrake settings is a good example.)
+As you use these manifests, you may encounter specific settings or entire domains that are absent from the ProfileManifests repository. When this happens to you, I would strongly encourage you to submit a [pull request](https://github.com/ProfileCreator/ProfileManifests/pulls) to the upstream ProfileManifests repository that adds the missing pieces for the benefit of everyone. ([This pull request](https://github.com/ProfileCreator/ProfileManifests/pull/335/files) that adds a manifest for Handbrake settings is a good example.) After pull requests are reviewed and merged, the ProfileManifestsMirror repository will be updated automatically to reflect the changes.
 
 If you don't have the time or interest for submitting pull requests, the next best thing would be to [check the ProfileManifests repository issues](https://github.com/ProfileCreator/ProfileManifests/issues) to see whether anyone else has already submitted a request for your desired app or setting. If not, submit a new issue, and a generous volunteer may grant your request.
 
