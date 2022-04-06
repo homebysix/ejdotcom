@@ -3,7 +3,7 @@ title: "Projects"
 weight: 10
 ---
 
-Some of the open-source projects I've involved with include:
+Some of the open-source projects I'm involved with include:
 
 {{< projects >}}
 
