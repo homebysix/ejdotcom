@@ -1,0 +1,48 @@
+- name: "Linters, Hooks, and Pipelines: Automation to Save Your Bacon"
+  url: https://youtu.be/mYKEM9Gplks
+  date: 2019-07-10
+  location: MacAdmins Conference at Penn State, State College, PA
+  description: |
+    Deep-dive discussion of three dev ops tools that Mac admins may find useful, including example usage of the [shellcheck](https://github.com/koalaman/shellcheck) and [pylint](https://www.pylint.org/) linters, various [pre-commit](https://pre-commit.com/) hooks, and GitLab CI/CD automation.
+
+- name: Intro to Pre-Commit
+  url: https://youtu.be/1UCyGC6DVOU
+  date: 2019-06-12
+  location: MacDevOpsYVR Conference, Vancouver, Canada
+  description: |
+    Introduction to the [pre-commit](https://pre-commit.com/) framework and my accompanying [pre-commit-macadmin](https://github.com/homebysix/pre-commit-macadmin) collection of hooks, which can help Mac admins perform simple validation on their code before committing changes.
+
+- name: How (Not) To Do Bad Things With AutoPkg
+  url: https://youtu.be/LnvQmLcDF8w
+  date: 2017-07-12
+  location: MacAdmins Conference at Penn State, State College, PA
+  description: |
+    Discussed several possible ways to exploit AutoPkg to deliver unexpected or malicious payloads, and gave concrete examples of how IT administrators should prevent these problems.
+
+- name: "Managing Munki: Intelligent Practices for Structuring, Maintaining, and Collaborating"
+  url: https://youtu.be/ftLBpNZsM04
+  date: 2016-06-29
+  location: MacAdmins Conference at Penn State, State College, PA
+  description: |
+    Together with Shea Craig, discussed methods, tools, and practices that promote the use of Munki as a self-documenting, scalable, and thoughtfully designed solution for managing Mac software deployment.
+
+- name: Writing Better AutoPkg Recipes With The Help Of Recipe Robot
+  url: https://youtu.be/5VKDzY8bBxI
+  date: 2016-06-28
+  location: MacAdmins Conference at Penn State, State College, PA
+  description: |
+    Together with Shea Craig, demonstrated how Recipe Robot can be used to create new AutoPkg recipes, audit existing recipes, and assist in the creation of child recipes. Promoted increased collaboration among AutoPkg recipe authors.
+
+- name: Intro to Recipe Robot
+  url: https://youtu.be/DgjO1mfMHtI
+  date: 2016-06-20
+  location: MacDevOpsYVR Conference, Vancouver, Canada
+  description: |
+    This brief talk introduced Mac admins to Recipe Robot, a tool that helps create AutoPkg recipes for basic Mac apps.
+
+- name: Auto Update Magic
+  url: https://youtu.be/pL7hqBh5T4Y
+  date: 2014-10-22
+  location: Jamf Nation User Conference, Minneapolis, MN
+  description: |
+    Introduced and demonstrated new features in AutoPkgr that allow it to easily integrate with Jamf Pro for the purpose of automatically distributing software updates to Mac endpoints.
