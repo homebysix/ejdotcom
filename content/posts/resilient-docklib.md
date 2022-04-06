@@ -571,7 +571,7 @@ I'm taking [my own advice](#avoid-monolingual-assumptions) here by not relying o
 
 I've occasionally encountered a [race condition](https://en.wikipedia.org/wiki/Race_condition) with docklib scripts wherein the script executes before the Dock itself has launched. On a user's first login, this results in a situation where docklib tries to read a preference that doesn't yet exist, causing the script to fail.
 
-The way dockutil [works around this issue](https://github.com/kcrawford/dockutil/commit/09f132e7cfed4d26eb0808f877df089e59ec978a) is by waiting for the `mod-count` of the dock to be greater than 1. Docklib takes a more hands-off approach, choosing to leave this particular workaround up to admins’ discretion instead.
+The way dockutil [worked around this issue](https://github.com/kcrawford/dockutil/commit/09f132e7cfed4d26eb0808f877df089e59ec978a) (when it was written in Python) was by waiting for the `mod-count` of the dock to be greater than 1. Docklib takes a more hands-off approach, choosing to leave this particular workaround up to admins’ discretion instead.
 
 I prefer to build in a loop that waits for the Dock process to run before continuing.
 
