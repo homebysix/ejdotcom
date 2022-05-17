@@ -591,7 +591,7 @@ def wait_for_dock(max_time=60):
     check_cmd = ["/usr/bin/pgrep", "-qx", "Dock"]
 
     # Check every 1 second for the Dock process
-    while subprocess.run(check_cmd).returncode != 0:
+    while subprocess.run(check_cmd, check=False).returncode != 0:
         if count >= max_time:
             # We reached our max_time
             logging.error("Dock did not start within %s seconds. Exiting." % max_time)
