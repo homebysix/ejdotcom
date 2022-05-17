@@ -594,11 +594,11 @@ def wait_for_dock(max_time=60):
     while subprocess.run(check_cmd, check=False).returncode != 0:
         if count >= max_time:
             # We reached our max_time
-            logging.error("Dock did not start within %s seconds. Exiting." % max_time)
+            print("Dock did not start within %s seconds. Exiting." % max_time)
             sys.exit(1)
         elif count % 5 == 0:
             # Provide status output every 5 seconds
-            logging.info("Waiting up to %d seconds for Dock to start..." % max_time - count)
+            print("Waiting up to %d seconds for Dock to start..." % max_time - count)
 
         # Increment count and wait one second before looping
         count += 1
