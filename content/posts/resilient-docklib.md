@@ -499,11 +499,11 @@ def is_default(dock):
 
     # List of default Dock items from recent versions of macOS
     apple_default_apps = [
-        "App Store", "Calendar", "Contacts", "FaceTime", "Finder", "iBooks",
-        "iCal", "iTunes", "Keynote", "Launchpad", "Mail", "Maps", "Messages",
-        "Mission Control", "Music", "News", "Notes", "Numbers", "Pages",
-        "Photo Booth", "Photos", "Podcasts", "Reminders", "Safari", "Siri",
-        "System Preferences", "TV",
+        "App Store", "Calendar", "Contacts", "FaceTime", "Finder", "Freeform",
+        "iBooks", "iCal", "iTunes", "Keynote", "Launchpad", "Mail", "Maps",
+        "Messages", "Mission Control", "Music", "News", "Notes", "Numbers",
+        "Pages", "Photo Booth", "Photos", "Podcasts", "Reminders", "Safari",
+        "Siri", "System Preferences", "TV",
     ]
 
     # Gather a list of default/custom apps for script output

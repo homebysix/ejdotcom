@@ -17,32 +17,39 @@
   date: 2017-07-12
   location: MacAdmins Conference at Penn State, State College, PA
   description: |
-    Discussed several possible ways to exploit AutoPkg to deliver unexpected or malicious payloads, and gave concrete examples of how IT administrators should prevent these problems.
+    Discussed several possible ways to exploit [AutoPkg](https://github.com/autopkg/autopkg) to deliver unexpected or malicious payloads, and gave concrete examples of how IT administrators should prevent these problems.
 
 - name: "Managing Munki: Intelligent Practices for Structuring, Maintaining, and Collaborating"
   url: https://youtu.be/ftLBpNZsM04
   date: 2016-06-29
   location: MacAdmins Conference at Penn State, State College, PA
   description: |
-    Together with Shea Craig, discussed methods, tools, and practices that promote the use of Munki as a self-documenting, scalable, and thoughtfully designed solution for managing Mac software deployment.
+    Together with Shea Craig, discussed methods, tools, and practices that promote the use of [Munki](https://github.com/munki/munki) as a self-documenting, scalable, and thoughtfully designed solution for managing Mac software deployment.
 
 - name: Writing Better AutoPkg Recipes With The Help Of Recipe Robot
   url: https://youtu.be/5VKDzY8bBxI
   date: 2016-06-28
   location: MacAdmins Conference at Penn State, State College, PA
   description: |
-    Together with Shea Craig, demonstrated how Recipe Robot can be used to create new AutoPkg recipes, audit existing recipes, and assist in the creation of child recipes. Promoted increased collaboration among AutoPkg recipe authors.
+    Together with Shea Craig, demonstrated how [Recipe Robot](https://github.com/homebysix/recipe-robot) can be used to create new [AutoPkg](https://github.com/autopkg/autopkg) recipes, audit existing recipes, and assist in the creation of child recipes. Promoted increased collaboration among AutoPkg recipe authors.
 
 - name: Intro to Recipe Robot
   url: https://youtu.be/DgjO1mfMHtI
   date: 2016-06-20
   location: MacDevOpsYVR Conference, Vancouver, Canada
   description: |
-    This brief talk introduced Mac admins to Recipe Robot, a tool that helps create AutoPkg recipes for basic Mac apps.
+    This brief talk introduced Mac admins to [Recipe Robot](https://github.com/homebysix/recipe-robot), a tool that helps create [AutoPkg](https://github.com/autopkg/autopkg) recipes for basic Mac apps.
+
+- name: Reissuing FileVault Keys with Jamf
+  url: https://youtu.be/ugznU55H3-I?t=795
+  date: 2015-01-27
+  location: MacBrained Meetup at Pinterest, San Francisco, CA
+  description: |
+    Introduced a [workflow](https://github.com/homebysix/jss-filevault-reissue) that Jamf administrators could use to reissue and escrow FileVault recovery keys.
 
 - name: Auto Update Magic
   url: https://youtu.be/pL7hqBh5T4Y
   date: 2014-10-22
   location: Jamf Nation User Conference, Minneapolis, MN
   description: |
-    Introduced and demonstrated new features in AutoPkgr that allow it to easily integrate with Jamf Pro for the purpose of automatically distributing software updates to Mac endpoints.
+    Introduced and demonstrated new features in [AutoPkgr](https://github.com/lindegroup/autopkgr/) that allow it to easily integrate with Jamf Pro for the purpose of automatically distributing software updates to Mac endpoints.
