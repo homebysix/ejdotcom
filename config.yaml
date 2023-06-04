@@ -6,7 +6,7 @@ theme: "cocoa-ej"
 pygmentsCodeFences: true
 PygmentsStyle: "emacs"
 # disableKinds: ["RSS"]
-googleAnalytics: "UA-286289-7"
+googleAnalytics: "G-DZP38PR22E"
 
 taxonomies:
   tag: "tags"

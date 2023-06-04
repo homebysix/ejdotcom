@@ -1,5 +1,5 @@
 ---
-title: "ProfileCreator Manifests Now Available for Jamf"
+title: "ProfileCreator manifests now available for Jamf"
 date: 2021-12-16T19:00:00-08:00
 description: Introducing a mirror of the ProfileManifests repository in JSON schema format, which provides Jamf administrators access to an extensive collection of manifests that can be used with the custom manifest feature of Jamf.
 slug: profilemanifestsmirror
