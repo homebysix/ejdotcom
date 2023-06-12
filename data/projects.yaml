@@ -1,3 +1,9 @@
+- name: Escrow Buddy
+  url: https://github.com/macadmins/escrow-buddy
+  description: A tool that helps Security and IT teams ensure they have valid FileVault recovery keys for all their Macs in MDM.
+  roles:
+    - creator
+
 - name: Recipe Robot
   url: https://github.com/homebysix/recipe-robot
   description: A kick-ass tool for creating AutoPkg recipes.
