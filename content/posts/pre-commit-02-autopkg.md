@@ -54,6 +54,8 @@ repos:
       - id: check-autopkg-recipes
 ```
 
+<!-- NOTE: Periodically verify and update this list of pre-commit checks. -->
+
 As of this writing, the list of checks includes:
 
 - **The recipe must be a valid plist or YAML file.** This hook will catch basic syntax or formatting errors in your recipes, which can be particularly undesirable in public repositories.
