@@ -1,6 +1,6 @@
 ---
 title: Managing login mechanisms in the macOS authorization database
-date: 2023-08-05T06:00:00-07:00
+date: 2023-08-05T12:00:00-07:00
 description: Advice for Mac systems engineers who are deploying authorization plugins to their managed Macs and need to preserve the desired state of `system.login.console` mechanisms in the macOS authorization database.
 slug: macos-authdb-mechs
 tags:
@@ -28,7 +28,7 @@ In the Mac admin world, such policies could include federating local accounts to
 
 Authorization plugins can have multiple "mechanisms" that can serve specific purposes or run with specific privileges. In order to register these mechanisms with the macOS authorization services API, they need to be listed in the `system.login.console` section of the authorization database, within the `mechanisms` array.
 
-The command `security authorizationdb read system.login.console` will display the current mechanisms in a plist. Unlike many on-disk plists Mac admins are used to dealing with, this plist exists in memory. (Although files do exist at `/var/db/auth.db*` that appear to cache the parsed contents of the database, directly rewriting these files is not recommended by Apple.)
+The command `security authorizationdb read system.login.console` will display the current mechanisms in a plist. (macOS stores the state of these mechanisms in multiple places, but using the `security` command and other supported APIs is the best way to ensure any automation you create is stable and long-lived.)
 
 <!-- NOTE: Periodically verify and update the following command output. -->
 
