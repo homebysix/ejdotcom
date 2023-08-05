@@ -16,35 +16,11 @@
   roles:
     - maintainer
 
-- name: AutoPkgr
-  url: http://www.lindegroup.com/autopkgr
-  description: Mac app that makes it easy to install and configure AutoPkg.
-  roles:
-    - co-creator
-
-- name: Repo Lasso
-  url: https://github.com/homebysix/repo-lasso
-  description: A tool that enables GitHub organization maintainers to submit bulk pull requests across multiple organization repositories at once.
-  roles:
-    - creator
-
-- name: jss-recipes
-  url: https://github.com/autopkg/jss-recipes
-  description: Collection of standard AutoPkg recipes for administrators of Jamf Pro.
-  roles:
-    - maintainer
-
 - name: docklib
   url: https://github.com/homebysix/docklib
   description: Python module that allows administrators to manipulate the macOS Dock.
   roles:
     - maintainer
-
-- name: touchbarlib
-  url: https://github.com/homebysix/touchbarlib
-  description: Python module that allows administrators to manipulate the macOS TouchBar configuration.
-  roles:
-    - creator
 
 - name: Pre-Commit Hooks for MacAdmins
   url: https://github.com/homebysix/pre-commit-macadmin
@@ -55,5 +31,29 @@
 - name: ProfileManifestsMirror
   url: https://github.com/Jamf-Custom-Profile-Schemas/ProfileManifestsMirror
   description: An extensive collection of MDM profile manifests in JSON format for use with Jamf. (See details in [this post](/posts/profilemanifestsmirror).)
+  roles:
+    - creator
+
+- name: Repo Lasso
+  url: https://github.com/homebysix/repo-lasso
+  description: A tool that enables GitHub organization maintainers to submit bulk pull requests across multiple organization repositories at once.
+  roles:
+    - creator
+
+- name: AutoPkgr
+  url: http://www.lindegroup.com/autopkgr
+  description: Mac app that makes it easy to install and configure AutoPkg.
+  roles:
+    - co-creator
+
+- name: jss-recipes
+  url: https://github.com/autopkg/jss-recipes
+  description: Collection of standard AutoPkg recipes for administrators of Jamf Pro.
+  roles:
+    - maintainer
+
+- name: touchbarlib
+  url: https://github.com/homebysix/touchbarlib
+  description: Python module that allows administrators to manipulate the macOS TouchBar configuration.
   roles:
     - creator

@@ -58,6 +58,8 @@ The `no-commit-to-branch` hook proves valuable if your team's Git host settings 
           - id: no-commit-to-branch
     ```
 
+    <!-- NOTE: Periodically verify and update the default branch below. -->
+
     Note that as of this post, `master` is the default branch that the hook checks for. If your default branch is named differently, you can specify a `--branch` argument with the desired branch name(s), like so:
 
     ```yaml

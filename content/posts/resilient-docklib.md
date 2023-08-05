@@ -485,6 +485,8 @@ Recently I've switched to a more thorough introspection of the current Dock cont
 
 This script stores a list of all the apps that have been present in modern macOS default Docks. If the current Dock consists _solely_ of items in that list, the Dock is probably safe to alter in my estimation.
 
+<!-- NOTE: Periodically verify and update the following list of default macOS apps. -->
+
 ```py {linenos=table, hl_lines=["12-19", "29-33", "42-43", "52-55"], linenostart=1}
 #!/usr/local/bin/managed_python3
 
