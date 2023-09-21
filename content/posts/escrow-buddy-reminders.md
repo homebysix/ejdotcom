@@ -1,6 +1,6 @@
 ---
 title: Escrow Buddy with logout reminders
-date: 2023-09-20T10:00:00-07:00
+date: 2023-09-21T08:00:00-07:00
 description: Example workflows that pair Escrow Buddy with user-facing notifications that motivate a logout.
 slug: escrow-buddy-reminders
 tags:
