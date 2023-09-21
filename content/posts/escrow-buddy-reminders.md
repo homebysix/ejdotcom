@@ -120,7 +120,7 @@ SCHEDULER="/usr/local/bin/yo_scheduler"
 
 &nbsp;
 
-Many of the above apps offer administrators the ability to customize which icon is used in the notification. You may prefer to use a familiar company logo, or one associated with the information security team or the IT Help Desk.
+Many of the above apps offer administrators the ability to customize which icon is used in the notification. You may prefer to use a familiar company logo or one associated with the information security team or the IT Help Desk.
 
 With the proper parameters, the notification could automatically log out when the action button is clicked, or could offer a "Learn More" option that links to an internal company knowledge base article about the FileVault escrow initiative. See the documentation for the notification tool you're using (linked above) for details on how to configure custom actions.
 
@@ -136,7 +136,9 @@ For Jamf users, a policy in the Self Service app could inform users of affected 
 
 ![](../images/eb-logout-self-service.png)
 
-The smart group criteria used to scope this policy would be the same as the criteria being used to set `GenerateNewKey` to `true` when deploying Escrow Buddy.
+The smart group criteria used to scope this Self Service policy would be the same as the criteria being used to set `GenerateNewKey` to `true` when deploying Escrow Buddy.
+
+In order to facilitate the log out, the Self Service policy could execute a script or one-line process, or you could configure the policy with a Restart payload in place of logging out. Either will work.
 
 ### Munki: Managed Software Center
 
@@ -175,4 +177,4 @@ This produces the messaging shown below, and which will force a logout to occur 
 
 Another option for enforcement is to use a user deferral script like the example outlined [here](https://bigmacadmin.wordpress.com/2023/02/20/scripting-user-deferrals-with-swiftdialog/). You would need to customize the `check_the_things()` function to define the criteria that determine whether the Mac is eligible for escrow; use [the `installcheck_script` from the Munki pkginfo example above](https://gist.github.com/homebysix/41b099cf1f7ff49e0fb286a854b64551#file-filevault_escrow_helper-1-0-plist-L23) as inspiration. You would also need to customize the `do_the_things()` function to trigger a logout to occur.
 
-However, {{<mark>}}both of these enforcement options should be considered a last resort{{</mark>}}, as they reintroduce many of the communication and context-setting requirements of the reissue script itself and is often a poor experience for your users.
+However, {{<mark>}}both of these enforcement options should be considered a last resort{{</mark>}}, as they reintroduce many of the communication and context-setting requirements of the reissue script itself and could create a poor experience for your users.
