@@ -1,6 +1,6 @@
 ---
-title: Automatic inventory collection after FileVault key generation
-date: 2023-09-23T11:00:00-07:00
+title: Escrowing FileVault keys to MDM quickly after generation
+date: 2023-09-23T13:00:00-07:00
 description: A daemon that MDM administrators can use to ensure newly-generated FileVault recovery keys are escrowed to MDM as soon after generation as possible.
 slug: filevault-escrow-daemon
 tags:
@@ -11,15 +11,15 @@ tags:
 
 In years past when institutional Macs were primarily managed by a combination of agents, daemons, and scheduled command-line tool invocations, administrators could predict and control the timing of management tasks with much more specificity. The order of related events could be scripted and dependencies could be accounted for reliably and smoothly.
 
-Now that the world is moving towards asynchronous MDM and DDM commands for a growing number of management capabilities, it's not as straightforward as it used to be to create workflows that depend upon the successful execution of sequential tasks, especially when mixing tasks delivered over APNS and tasks that use local agents or executables.
+Now that the Mac admin world is moving towards asynchronous MDM and DDM commands for a growing number of management capabilities, it's not as straightforward as it used to be to create workflows that depend upon the successful execution of sequential tasks, especially when mixing tasks delivered over APNS and tasks that use local agents or executables.
 
-A basic example of this difficulty is the gap between the generation of a new FileVault key (using the local `fdesetup` binary built into macOS) and its subsequent escrow to your MDM (during the Mac's response to the `SecurityInfo` MDM command). Many MDMs align the timing of `SecurityInfo` commands to the execution of an inventory collection process, which may happen hours or even days after the FileVault key is escrowed. Even a delay of mere minutes may prove problematic if the affected Mac is not in daily use; closing its lid immediately after enabling FileVault could be enough to prevent the new key from being escrowed successfully.
+A basic example of this difficulty is the gap between the generation of a new FileVault key (using the local `fdesetup` binary built into macOS) and its subsequent escrow to your MDM (during the Mac's response to the `SecurityInfo` MDM command). Many MDMs align the timing of `SecurityInfo` commands to the execution of an inventory collection process, which may happen hours or even days after the FileVault key is escrowed. Even a delay of mere minutes may prove problematic if the affected Mac is not actively used; closing its lid immediately after enabling FileVault could be enough to prevent the new key from being escrowed successfully.
 
 Some administrators have tried to solve this inconvenience by simply running inventory collection more often — at every startup or login, for example. However, more frequent inventory collection comes at the cost of computing and network resources, and the majority of startups and logins are not going to produce actionable changes in device inventory.
 
 ## FileVaultPRKWatcher daemon
 
-{{% mark %}}My proposal is to trigger the `SecurityInfo` command in a more targeted way: by creating a daemon that runs an inventory update when changes to _/var/db/FileVaultPRK.dat_ are detected.{{% /mark %}} This way we can ensure that the inventory update happens as soon after a significant inventory-related event as possible, without producing extra inventory collection runs at other times.
+{{% mark %}}My proposal is to trigger escrow in a more targeted way: by creating a daemon that runs an inventory update when changes to _/var/db/FileVaultPRK.dat_ are detected.{{% /mark %}} This way we can ensure that the inventory update happens as soon after a significant inventory-related event as possible, without producing extra inventory collection runs at other times.
 
 A LaunchDaemon that implements this proposal could be stored at _/Library/LaunchDaemons/com.elliotjordan.FileVaultPRKWatcher.plist_ and contain the following:
 
@@ -36,10 +36,7 @@ A LaunchDaemon that implements this proposal could be stored at _/Library/Launch
     <array>
         <string>/usr/local/bin/jamf</string>
         <string>recon</string>
-        <string>-verbose</string>
     </array>
-    <key>ThrottleInterval</key>
-    <integer>300</integer>
     <key>WatchPaths</key>
     <array>
         <string>/var/db/FileVaultPRK.dat</string>
@@ -48,18 +45,24 @@ A LaunchDaemon that implements this proposal could be stored at _/Library/Launch
 </plist>
 ```
 
-In the example above, I've included an invocation of `jamf recon`, the command that triggers inventory collection on computers enrolled in Jamf. The `SecurityInfo` MDM command is included in the recon process. If you use a different MDM, you'll need to adjust the `ProgramArguments` array as appropriate.
+Let's break down the components of the LaunchDaemon:
 
-You could also customize the filename and label to match the reverse-domain naming of your organization, if you so choose.
+- **`Label`**: A reverse-domain identifier that should match the filename of the daemon. You can customize this to reflect your organization's domain if you prefer.
+
+- **`ProgramArguments`**: An array of strings that represents the shell command that triggers the `SecurityInfo` command for your MDM. I've used `jamf recon`, but you should customize this to fit your MDM. For example, Kandji admins would use `kandji update-mdm`. Be sure each "word" in the command is represented by a string, and use the full path to the binary when possible to avoid relaying on the shell `PATH` environment variable.
+
+- **`WatchPaths`**: This array of strings represents the file path(s) we wish to monitor for changes. In this case, we're specifying the path to the encrypted CMS envelope where macOS stores the new FileVault personal recovery key (PRK).
 
 ## Demonstration
 
 To prove this concept, we can use the macOS logs to calculate the time between FileVault key generation and escrow using three different configurations. The command used to retrieve the below logs is:
 
-    log show --style compact \
-        --predicate 'process == "mdmclient"
-            AND (message CONTAINS "PUT) [Acknowledged(SecurityInfo"
-            OR message CONTAINS "Saved PRK escrow file")'
+```sh
+log show --style compact \
+    --predicate 'process == "mdmclient"
+        AND (message CONTAINS "PUT) [Acknowledged(SecurityInfo"
+        OR message CONTAINS "Saved PRK escrow file")'
+```
 
 ### Daily inventory
 
@@ -71,7 +74,7 @@ Timestamp               Ty Process[PID:TID]
 2023-09-07 09:50:20.810 Df mdmclient[2873:6149] [com.apple.ManagedClient:HTTPUtil] [0:MDMDaemon:HTTPUtil:<0x6149>] >>>>> Sending HTTP request (PUT) [Acknowledged(SecurityInfo):beebd0b3-7d15-4e06-8894-ba59b7163992] >>>>>
 ```
 
-In this example, the time between generation and escrow was **16 hours**. This could be anything up to 24 hours, but it's likely that this method will produce a delay of hours, not minutes.
+In this example, the time between generation and escrow was almost **18 hours**. This could be anything up to 24 hours, but it's likely that this method will produce a delay of hours, not minutes.
 
 ### Login inventory
 
