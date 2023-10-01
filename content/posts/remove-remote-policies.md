@@ -1,6 +1,7 @@
 ---
 title: "Removing Jamf Remote policies using an API script"
 date: 2023-10-01T10:00:00-07:00
+description: An example script that uses the Jamf Pro SDK Python module to remove policies left over from usage of the deprecated Jamf Pro app.
 slug: remove-remote-policies
 tags:
     - macadmin
