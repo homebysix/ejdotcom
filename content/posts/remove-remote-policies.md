@@ -18,3 +18,5 @@ Bulk removal of Jamf Remote scripts is possible by searching for policies via th
 You’ll need to substitute the URL of your Jamf instance in line 16 of the script. When running the script you’ll be prompted for your Jamf Pro credentials. There are [other authentication options](https://macadmins.github.io/jamf-pro-sdk-python/reference/credentials.html) available in the SDK — for example, retrieving the credentials from your macOS keychain or hard-coding the credentials into your copy of the script.
 
 When the script runs, you’ll see confirmation of how many Jamf Remote policies were removed, as well as the name and ID of each policy.
+
+If you prefer shell over Python, you may want to take a look at William Smith's [DeleteCasperRemotePolicies.sh](https://github.com/talkingmoose/Jamf-Scripts/blob/master/DeleteCasperRemotePolicies.sh) script.
