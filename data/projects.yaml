@@ -45,15 +45,3 @@
   description: Mac app that makes it easy to install and configure AutoPkg.
   roles:
     - co-creator
-
-- name: jss-recipes
-  url: https://github.com/autopkg/jss-recipes
-  description: Collection of standard AutoPkg recipes for administrators of Jamf Pro.
-  roles:
-    - maintainer
-
-- name: touchbarlib
-  url: https://github.com/homebysix/touchbarlib
-  description: Python module that allows administrators to manipulate the macOS TouchBar configuration.
-  roles:
-    - creator
