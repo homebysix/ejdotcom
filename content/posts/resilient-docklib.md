@@ -81,6 +81,7 @@ Let's run through a rudimentary test of our ability to back up, make a Dock chan
     ```py {linenos=table}
     #!/usr/local/bin/managed_python3
     from docklib import Dock
+
     dock = Dock()
     item = dock.makeDockAppEntry("/System/Applications/Chess.app")
     dock.items["persistent-apps"].append(item)
@@ -500,6 +501,7 @@ def is_default(dock):
     """Return True if the dock is uncustomized from macOS default, or False otherwise."""
 
     # List of default Dock items from recent versions of macOS
+    # fmt: off
     apple_default_apps = [
         "App Store", "Calendar", "Contacts", "FaceTime", "Finder", "Freeform",
         "iBooks", "iCal", "iTunes", "Keynote", "Launchpad", "Mail", "Maps",
@@ -507,6 +509,7 @@ def is_default(dock):
         "Pages", "Photo Booth", "Photos", "Podcasts", "Reminders", "Safari",
         "Siri", "System Preferences", "TV",
     ]
+    # fmt: on
 
     # Gather a list of default/custom apps for script output
     apps = {"default": [], "custom": []}
@@ -561,10 +564,10 @@ Additionally, the above approach requires a bit of maintenance: administrators t
 I'd like to call attention to lines 25-28 of the above code for a moment:
 
 ```py {linenos=table, linenostart=25}
-            # Compare the path, not the label, due to localization
-            pathurl = item["tile-data"]["file-data"]["_CFURLString"]
-            path = urlparse(unquote(pathurl)).path.rstrip("/")
-            app_name = os.path.split(path)[-1].replace(".app", "")
+# Compare the path, not the label, due to localization
+pathurl = item["tile-data"]["file-data"]["_CFURLString"]
+path = urlparse(unquote(pathurl)).path.rstrip("/")
+app_name = os.path.split(path)[-1].replace(".app", "")
 ```
 
 I'm taking [my own advice](#avoid-monolingual-assumptions) here by not relying on the item's label as an accurate point for comparison to our "Apple default apps" list. This allows the `is_default` function to work as expected regardless of the user's selected language.
