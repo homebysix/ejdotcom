@@ -10,7 +10,7 @@
   date: 2023-09-21
   location: Jamf Nation User Conference, Austin, TX
   description: |
-    In this in-person session at the Austin Convention Center, I covered the reasons FileVault recovery keys might be missing from company or school MDMs, shared context around pitfalls of previous workflows, and introduced [Escrow Buddy](https://github.com/macadmins/escrow-buddy) as a scalable solution for modern Mac admins. Video will be available on YouTube later this year.
+    In this in-person session at the Austin Convention Center, I covered the reasons FileVault recovery keys might be missing from company or school MDMs, shared context around pitfalls of previous workflows, and introduced [Escrow Buddy](https://github.com/macadmins/escrow-buddy) as a scalable solution for modern Mac admins.
 
 - name: "Mac Admins Podcast: Episode #328"
   url: https://podcast.macadmins.org/2023/08/14/episode-328-elliot-jordan-and-escrow-buddy/
