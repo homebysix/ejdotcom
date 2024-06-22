@@ -32,7 +32,7 @@ The command `security authorizationdb read system.login.console` will display th
 
 <!-- NOTE: Periodically verify and update the following command output. -->
 
-As of macOS Ventura, the command above produces the following output:
+As of macOS Sonoma, the command above produces the following output:
 
 ```xml
 % security authorizationdb read system.login.console
@@ -64,17 +64,16 @@ As of macOS Ventura, the command above produces the following output:
         <string>HomeDirMechanism:status</string>
         <string>MCXMechanism:login</string>
         <string>CryptoTokenKit:login</string>
-        <string>PSSOAuthPlugin:login-auth</string>
         <string>loginwindow:done</string>
     </array>
     <key>modified</key>
-    <real>692230356.95700204</real>
+    <real>717879783.86331403</real>
     <key>shared</key>
     <true/>
     <key>tries</key>
     <integer>10000</integer>
     <key>version</key>
-    <integer>10</integer>
+    <integer>11</integer>
 </dict>
 </plist>
 YES (0)
