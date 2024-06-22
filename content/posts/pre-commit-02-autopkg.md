@@ -49,7 +49,7 @@ The `check-autopkg-recipes` hook includes numerous tests for AutoPkg recipes, ma
 ```yaml {linenos=table}
 repos:
   - repo: https://github.com/homebysix/pre-commit-macadmin
-    rev: v1.10.1
+    rev: v1.16.2
     hooks:
       - id: check-autopkg-recipes
 ```
@@ -69,7 +69,7 @@ As of this writing, the list of checks includes:
     ```yaml {linenos=table, hl_lines=[6]}
     repos:
       - repo: https://github.com/homebysix/pre-commit-macadmin
-        rev: v1.10.1
+        rev: v1.16.2
         hooks:
           - id: check-autopkg-recipes
             args: ["--recipe-prefix=com.github.homebysix."]
@@ -92,7 +92,7 @@ As of this writing, the list of checks includes:
     ```yaml {linenos=table, hl_lines=[9]}
     repos:
       - repo: https://github.com/homebysix/pre-commit-macadmin
-        rev: v1.10.1
+        rev: v1.16.2
         hooks:
           - id: check-autopkg-recipes
             args:
@@ -122,7 +122,7 @@ To enable strict mode, add `--strict` to the `check-autopkg-recipes` hook argume
 ```yaml {linenos=table, hl_lines=[8]}
 repos:
   - repo: https://github.com/homebysix/pre-commit-macadmin
-    rev: v1.10.1
+    rev: v1.16.2
     hooks:
       - id: check-autopkg-recipes
         args: [
@@ -156,7 +156,7 @@ If your repository is public, you may want to limit its contents to AutoPkg _rec
 ```yaml {linenos=table, hl_lines=["11-12"]}
 repos:
   - repo: https://github.com/homebysix/pre-commit-macadmin
-    rev: v1.10.1
+    rev: v1.16.2
     hooks:
       - id: check-autopkg-recipes
         args: [
@@ -173,7 +173,7 @@ Often an organization's internal AutoPkg repository will contain both recipes an
 ```yaml {linenos=table, hl_lines=[12, 14]}
 repos:
   - repo: https://github.com/homebysix/pre-commit-macadmin
-    rev: v1.10.1
+    rev: v1.16.2
     hooks:
       - id: check-autopkg-recipes
         args: [
@@ -192,7 +192,7 @@ To ensure your recipe overrides begin with your desired identifier prefix, you c
 ```yaml {linenos=table, hl_lines=[8]}
 repos:
   - repo: https://github.com/homebysix/pre-commit-macadmin
-    rev: v1.10.1
+    rev: v1.16.2
     hooks:
       - id: check-autopkg-recipes
         args: [
@@ -224,7 +224,7 @@ Here's a _.pre-commit-config.yaml_ file that includes the recipe list hook, in a
 ```yaml {linenos=table, hl_lines=[16]}
 repos:
   - repo: https://github.com/homebysix/pre-commit-macadmin
-    rev: v1.10.1
+    rev: v1.16.2
     hooks:
       - id: check-autopkg-recipes
         args: [

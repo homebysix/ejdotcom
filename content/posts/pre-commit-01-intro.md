@@ -53,22 +53,22 @@ The `no-commit-to-branch` hook proves valuable if your team's Git host settings 
     ```yaml
     repos:
       - repo: https://github.com/pre-commit/pre-commit-hooks
-        rev: v3.4.0
+        rev: v4.6.0
         hooks:
           - id: no-commit-to-branch
     ```
 
     <!-- NOTE: Periodically verify and update the default branch below. -->
 
-    Note that as of this post, `master` is the default branch that the hook checks for. If your default branch is named differently, you can specify a `--branch` argument with the desired branch name(s), like so:
+    Note that as of this post, `main` and `master` are the default branches that the hook checks for. If your default branch is named differently, you can specify a `--branch` argument with the desired branch name(s), like so:
 
     ```yaml
     repos:
       - repo: https://github.com/pre-commit/pre-commit-hooks
-        rev: v3.4.0
+        rev: v4.6.0
         hooks:
           - id: no-commit-to-branch
-            args: [--branch, main]
+            args: [--branch, production]
     ```
 
 1. Finally, navigate to your Git repo and activate the hooks:
@@ -111,10 +111,10 @@ Additional hooks from the same repository can be added to the existing `hooks` l
 ```yaml
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v3.4.0
+    rev: v4.6.0
     hooks:
       - id: no-commit-to-branch
-        args: [--branch, main]
+        args: [--branch, production]
       - id: check-merge-conflict
 ```
 
@@ -123,10 +123,10 @@ You can add hooks from a different repository by supplying the repo's URL and de
 ```yaml
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v3.4.0
+    rev: v4.6.0
     hooks:
       - id: no-commit-to-branch
-        args: [--branch, main]
+        args: [--branch, production]
       - id: check-merge-conflict
   - repo: https://github.com/python/black
     rev: 20.8b1
