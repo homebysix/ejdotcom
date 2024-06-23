@@ -12,6 +12,6 @@ You can reach me by email ([elliot@elliotjordan.com](mailto:elliot@elliotjordan.
 
 ## Corrections
 
-Found a typo in one of my posts and want to fix it? First, thank you!
+Found a typo in one of my posts and want to fix it? Thank you!
 
-You can submit a pull request to my site's [GitHub repository](https://github.com/homebysix/ejdotcom) for any corrections. You'll find a small `</>` link at the bottom of every page that will take you directly to that page's source file.
+You can submit a pull request to my site's [GitHub repository](https://github.com/homebysix/ejdotcom) for any corrections. Or if pull requests aren't your thing, feel free to [email me](mailto:elliot@elliotjordan.com?subject=Correction%20for%20elliotjordan.com) and I'll make the correction myself.
