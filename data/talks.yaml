@@ -5,11 +5,11 @@
     I was one of three guests on this episode, which was recorded live at MacAD.UK in Brighton, UK. We discussed our favorite parts of the conference and shared our thoughts on the future of Mac device management.
 
 - name: "Escrow Buddy: A Tool for Escrowing Missing FileVault Recovery Keys"
-  url: https://whova.com/embedded/session/ByFHrJVagHgRRbp8IgeVVk3wd0wIRd4ULlqBEz7Z0wk%3D/3765294/
+  url: https://youtu.be/MS8r059x4Rg
   date: 2024-05-24
   location: MacAD.UK Conference, Brighton, UK
   description: |
-    At the MacAD.UK conference in Brighton, I continued spreading the word about how [Escrow Buddy](https://github.com/macadmins/escrow-buddy) can be used by MDM administrators to remediate missing FileVault keys. Video will be available on YouTube.
+    At the MacAD.UK conference in Brighton, I continued spreading the word about how [Escrow Buddy](https://github.com/macadmins/escrow-buddy) can be used by MDM administrators to remediate missing FileVault keys.
 
 - name: "Escrow Buddy: A Tool for Escrowing Missing FileVault Recovery Keys"
   url: https://youtu.be/XC8WzHGtsO0
