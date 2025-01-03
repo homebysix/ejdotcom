@@ -53,7 +53,7 @@ The `no-commit-to-branch` hook proves valuable if your team's Git host settings 
     ```yaml
     repos:
       - repo: https://github.com/pre-commit/pre-commit-hooks
-        rev: v4.6.0
+        rev: v5.0.0
         hooks:
           - id: no-commit-to-branch
     ```
@@ -65,7 +65,7 @@ The `no-commit-to-branch` hook proves valuable if your team's Git host settings 
     ```yaml
     repos:
       - repo: https://github.com/pre-commit/pre-commit-hooks
-        rev: v4.6.0
+        rev: v5.0.0
         hooks:
           - id: no-commit-to-branch
             args: [--branch, production]
@@ -111,7 +111,7 @@ Additional hooks from the same repository can be added to the existing `hooks` l
 ```yaml
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v4.6.0
+    rev: v5.0.0
     hooks:
       - id: no-commit-to-branch
         args: [--branch, production]
@@ -123,13 +123,13 @@ You can add hooks from a different repository by supplying the repo's URL and de
 ```yaml
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v4.6.0
+    rev: v5.0.0
     hooks:
       - id: no-commit-to-branch
         args: [--branch, production]
       - id: check-merge-conflict
-  - repo: https://github.com/python/black
-    rev: 20.8b1
+  - repo: https://github.com/psf/black
+    rev: 24.10.0
     hooks:
       - id: black
 ```
