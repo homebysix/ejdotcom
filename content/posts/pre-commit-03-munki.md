@@ -15,7 +15,7 @@ In previous posts, I [demonstrated the basics of pre-commit](../pre-commit-01-in
 
 ## Setup
 
-Setting up pre-commit in your Munki repo is simple:
+You'll need a Munki repository tracked by Git. Setting up pre-commit in your Munki repo is simple:
 
 1. [Install pre-commit](https://pre-commit.com/#install). I choose to do this with Homebrew:
 
@@ -64,11 +64,32 @@ As of this writing, the `check-munki-pkgsinfo` hook includes these checks:
 
 - **Uninstall scripts must not be missing.** If the pkginfo specifies an `uninstall_method` of `uninstall_script`, there must also be an `uninstall_script` key with a script defined.
 
-- **Items in the `items_to_copy` list must omit trailing slashes.**
+- **Scripts must start with a shebang.** You may optionally limit the shebang to a pre-approved list.
 
-- **Scripts must start with a shebang.**
+- **Paths in the `items_to_copy` list must omit trailing slashes.**
 
 - **Icons used by pkginfo files must be present in the repository.**
+
+If any of these checks fail, you'll be prevented from committing the file(s) using `git commit`, as shown below.
+
+```
+% git commit -m "Add nopkg that triggers logout for FileVault" pkgsinfo/enable_filevault.plist
+Check Munki Pkginfo Files................................................Failed
+- hook id: check-munki-pkgsinfo
+- exit code: 1
+
+pkgsinfo/enable_filevault.plist: RestartAction key set to unexpected value: RequiredLogout
+```
+
+Once you've corrected the error, `git commit` will succeed as usual.
+
+```
+% git commit -m "Add nopkg that triggers logout for FileVault" pkgsinfo/enable_filevault.plist
+Check Munki Pkginfo Files................................................Passed
+[master (root-commit) c4ebfb8] Add nopkg that triggers logout for FileVault
+ 1 file changed, 62 insertions(+)
+ create mode 100644 pkgsinfo/enable_filevault.plist
+```
 
 ## Customizing pkginfo checks
 
@@ -121,7 +142,7 @@ repos:
 
 ### Blocking applications for packages
 
-If a `blocking_applications` array doesn't exist for a dmg installer, Munki can determine the proper blocking apps to use based on the dmg contents. However that's not true for pkg installers, so you may wish to require a `blocking_applications` array for pkg installers using this argument:
+If a `blocking_applications` array doesn't exist for a dmg installer, Munki determines the proper blocking apps to use based on the `installs` array. However many pkg installers only use a `receipts` array, not an `installs` array, so you may wish to require a `blocking_applications` array for pkg installers using this argument:
 
 ```yaml {linenos=table, hl_lines=[6]}
 repos:
@@ -187,13 +208,14 @@ repos:
     rev: v1.18.0
     hooks:
       - id: check-munki-pkgsinfo
-        args:
-        - "--valid-shebangs"
-        - "#!/bin/bash"
-        - "#!/bin/sh"
-        - "#!/usr/local/bin/managed_python3"
-        - "#!/usr/local/munki/munki-python"
-        - "--"
+        args: [
+          "--valid-shebangs",
+            "#!/bin/bash",
+            "#!/bin/sh",
+            "#!/usr/local/bin/managed_python3",
+            "#!/usr/local/munki/munki-python",
+          "--"
+        ]
 ```
 
 ### Combining arguments
