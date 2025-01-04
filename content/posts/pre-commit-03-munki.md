@@ -1,8 +1,8 @@
 ---
-title: "Using pre-commit to check Munki repositories"
+title: "Using pre-commit with Munki repos"
 date: 2025-01-03T15:24:39-0800
 slug: pre-commit-03-munki
-description: How to use my shared pre-commit hooks for validating the contents of your Munki repo.
+description: How to use my shared pre-commit hooks for validating the contents of your Munki repository.
 tags:
     - munki
     - git
