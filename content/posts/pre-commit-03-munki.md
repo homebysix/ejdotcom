@@ -1,6 +1,6 @@
 ---
 title: "Using pre-commit with Munki repos"
-date: 2025-01-03T15:24:39-0800
+date: 2025-01-04T13:27:29-0800
 slug: pre-commit-03-munki
 description: How to use my shared pre-commit hooks for validating the contents of your Munki repository.
 tags:
@@ -52,7 +52,7 @@ As of this writing, the `check-munki-pkgsinfo` hook includes these checks:
 
 - **The pkginfo file must be a valid plist.**
 
-- **The pkginfo must contain certain required keys.** By default the required keys are `name` and `description`..
+- **The pkginfo must contain certain required keys.** By default the required keys are `name` and `description`.
 
 - **The key types must be what Munki expects.** The list of pkginfo keys Munki supports is [here](https://github.com/munki/munki/wiki/Supported-Pkginfo-Keys/); any keys that aren't the expected type will produce an error.
 
@@ -286,6 +286,6 @@ Many of the helpful hooks mentioned in my previous post about linting AutoPkg re
 
 ## Conclusion
 
-By integrating pre-commit hooks into your Munki repository, you can ensure that your pkginfo files and MunkiAdmin scripts are consistently validated and free of common errors. This not only helps maintain the integrity of your repository but also saves time and reduces the risk of deployment issues.
+By integrating pre-commit hooks into your Munki repository, your client platform engineering team can ensure that your pkginfo files and MunkiAdmin scripts are consistently validated and free of common errors. This not only helps maintain the integrity of your repository but also saves time and reduces the risk of deployment issues.
 
 You can inspect the code that drives the [`check-munki-pkgsinfo`](https://github.com/homebysix/pre-commit-macadmin/blob/main/pre_commit_hooks/check_munki_pkgsinfo.py), [`check-munkiadmin-scripts`](https://github.com/homebysix/pre-commit-macadmin/blob/main/pre_commit_hooks/check_munkiadmin_scripts.py), and [`munki-makecatalogs`](https://github.com/homebysix/pre-commit-macadmin/blob/main/pre_commit_hooks/munki_makecatalogs.py) hooks on GitHub. If you have any questions or suggestions, I welcome issues and pull requests on the [pre-commit-macadmin](https://github.com/homebysix/pre-commit-macadmin) repository.
