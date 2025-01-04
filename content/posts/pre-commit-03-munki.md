@@ -28,7 +28,7 @@ Setting up pre-commit in your Munki repo is simple:
     ```yaml {linenos=table}
     repos:
       - repo: https://github.com/homebysix/pre-commit-macadmin
-        rev: v1.17.0
+        rev: v1.18.0
         hooks:
           - id: check-munki-pkgsinfo
     ```
@@ -113,7 +113,7 @@ If you want to specify pkginfo keys that should be required in addition to `name
 ```yaml {linenos=table, hl_lines=[6]}
 repos:
   - repo: https://github.com/homebysix/pre-commit-macadmin
-    rev: v1.17.0
+    rev: v1.18.0
     hooks:
       - id: check-munki-pkgsinfo
         args: ["--required-keys", "name", "description", "category", "developer", "--"]
@@ -126,7 +126,7 @@ If a `blocking_applications` array doesn't exist for a dmg installer, Munki can 
 ```yaml {linenos=table, hl_lines=[6]}
 repos:
   - repo: https://github.com/homebysix/pre-commit-macadmin
-    rev: v1.17.0
+    rev: v1.18.0
     hooks:
       - id: check-munki-pkgsinfo
         args: ["--require-pkg-blocking-apps"]
@@ -141,7 +141,7 @@ By default, icons referenced by pkginfo files that are absent from your reposito
 ```yaml {linenos=table, hl_lines=[6]}
 repos:
   - repo: https://github.com/homebysix/pre-commit-macadmin
-    rev: v1.17.0
+    rev: v1.18.0
     hooks:
       - id: check-munki-pkgsinfo
         args: ["--warn-on-missing-icons"]
@@ -154,7 +154,7 @@ By default, files with the presence of a `__N` suffix (for example, `Firefox-81.
 ```yaml {linenos=table, hl_lines=[6]}
 repos:
   - repo: https://github.com/homebysix/pre-commit-macadmin
-    rev: v1.17.0
+    rev: v1.18.0
     hooks:
       - id: check-munki-pkgsinfo
         args: ["--warn-on-duplicate-imports"]
@@ -167,7 +167,7 @@ Checking for specific allowable catalogs and categories is not enabled by defaul
 ```yaml {linenos=table, hl_lines=[7,8]}
 repos:
   - repo: https://github.com/homebysix/pre-commit-macadmin
-    rev: v1.17.0
+    rev: v1.18.0
     hooks:
       - id: check-munki-pkgsinfo
         args: [
@@ -184,7 +184,7 @@ Scripts in Munki pkginfo files require a shebang in the first line in order to e
 ```yaml {linenos=table, hl_lines=["7-11"]}
 repos:
   - repo: https://github.com/homebysix/pre-commit-macadmin
-    rev: v1.17.0
+    rev: v1.18.0
     hooks:
       - id: check-munki-pkgsinfo
         args:
@@ -203,7 +203,7 @@ When combining arguments, just ensure the `--` argument is the last one in the l
 ```yaml {linenos=table, hl_lines=[7,12,15,21,26,27]}
 repos:
   - repo: https://github.com/homebysix/pre-commit-macadmin
-    rev: v1.17.0
+    rev: v1.18.0
     hooks:
       - id: check-munki-pkgsinfo
         args: [
@@ -241,7 +241,7 @@ Here's how you can add the `check-munkiadmin-scripts` hook to your _.pre-commit-
 ```yaml {linenos=table, hl_lines=[5]}
 repos:
   - repo: https://github.com/homebysix/pre-commit-macadmin
-    rev: v1.17.0
+    rev: v1.18.0
     hooks:
       - id: check-munkiadmin-scripts
 ```
@@ -253,7 +253,7 @@ This last hook runs the `makecatalogs` command to ensure all referenced packages
 ```yaml {linenos=table, hl_lines=[5]}
 repos:
   - repo: https://github.com/homebysix/pre-commit-macadmin
-    rev: v1.17.0
+    rev: v1.18.0
     hooks:
       - id: munki-makecatalogs
 ```
