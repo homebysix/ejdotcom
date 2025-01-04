@@ -73,7 +73,7 @@ I've created a [set of hooks for the pre-commit framework](https://github.com/ho
 ```yaml {linenos=table}
 repos:
 - repo: https://github.com/homebysix/pre-commit-macadmin
-  rev: v1.10.1
+  rev: v1.18.0
   hooks:
   - id: check-munkipkg-buildinfo
   - id: check-outset-scripts
