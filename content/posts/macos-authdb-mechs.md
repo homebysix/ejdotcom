@@ -32,7 +32,7 @@ The command `security authorizationdb read system.login.console` will display th
 
 <!-- NOTE: Periodically verify and update the following command output. -->
 
-As of macOS Sonoma, the command above produces the following output:
+As of macOS Sequoia, the command above produces the following output:
 
 ```xml
 % security authorizationdb read system.login.console

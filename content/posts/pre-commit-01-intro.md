@@ -68,7 +68,7 @@ The `no-commit-to-branch` hook proves valuable if your team's Git host settings 
         rev: v5.0.0
         hooks:
           - id: no-commit-to-branch
-            args: [--branch, production]
+            args: ["--branch", "production", "--"]
     ```
 
 1. Finally, navigate to your Git repo and activate the hooks:
@@ -114,7 +114,7 @@ repos:
     rev: v5.0.0
     hooks:
       - id: no-commit-to-branch
-        args: [--branch, production]
+        args: ["--branch", "production", "--"]
       - id: check-merge-conflict
 ```
 
@@ -126,7 +126,7 @@ repos:
     rev: v5.0.0
     hooks:
       - id: no-commit-to-branch
-        args: [--branch, production]
+        args: ["--branch", "production", "--"]
       - id: check-merge-conflict
   - repo: https://github.com/psf/black
     rev: 24.10.0

@@ -486,7 +486,8 @@ Recently I've switched to a more thorough introspection of the current Dock cont
 
 This script stores a list of all the apps that have been present in modern macOS default Docks. If the current Dock consists _solely_ of items in that list, the Dock is probably safe to alter in my estimation.
 
-<!-- NOTE: Periodically verify and update the following list of default macOS apps. -->
+<!-- NOTE: Periodically verify and update the following list of default macOS apps, and
+sync the list to this gist: https://gist.github.com/homebysix/077b373264a101d84a3f8cb48e9bca84 -->
 
 ```py {linenos=table, hl_lines=["12-19", "29-33", "42-43", "52-55"], linenostart=1}
 #!/usr/local/bin/managed_python3
@@ -504,10 +505,10 @@ def is_default(dock):
     # fmt: off
     apple_default_apps = [
         "App Store", "Calendar", "Contacts", "FaceTime", "Finder", "Freeform",
-        "iBooks", "iCal", "iTunes", "Keynote", "Launchpad", "Mail", "Maps",
-        "Messages", "Mission Control", "Music", "News", "Notes", "Numbers",
-        "Pages", "Photo Booth", "Photos", "Podcasts", "Reminders", "Safari",
-        "Siri", "System Preferences", "TV",
+        "iBooks", "iCal", "iPhone Mirroring", "iTunes", "Keynote", "Launchpad",
+        "Mail", "Maps", "Messages", "Mission Control", "Music", "News", "Notes",
+        "Numbers", "Pages", "Photo Booth", "Photos", "Podcasts", "Reminders",
+        "Safari", "Siri", "System Preferences", "TV",
     ]
     # fmt: on
 
