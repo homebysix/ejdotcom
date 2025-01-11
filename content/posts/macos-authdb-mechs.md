@@ -91,7 +91,7 @@ NO (-60005)
 {{% mark %}}During some macOS upgrades and updates, the list of login mechanisms in the authorization database gets reset to its default state.{{% /mark %}} This is understandable, as the introduction of new macOS features sometimes requires new entries in the database, and Apple probably aims to avoid the risk of incompatible third-party mechanisms breaking the login process.
 
 {{< admonition tip "Default authorization database" >}}
-The fresh authorization database is synthesized from <em>/System/Library/Security/authorization.plist</em>. Referring to this file on a given version of macOS can help you understand which mechanisms are standard and in which order they're found.
+The fresh authorization database is synthesized from _/System/Library/Security/authorization.plist_. Referring to this file on a given version of macOS can help you understand which mechanisms are standard and in which order they're found.
 {{< /admonition >}}
 
 If you deploy an authorization plugin to your managed Macs, the potential for periodic reset puts the onus on you and your team to be aware of when the plugins you deploy might have been removed from the authorization database and — after testing and ensuring compatibility with new macOS versions — re-adding your plugin mechanism to the authorization database to restore functionality.

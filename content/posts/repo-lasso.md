@@ -76,7 +76,7 @@ EOF
 Passing the above configuration parameters in via the command line is also supported.
 
 {{< admonition tip tip >}}
-Use <code>./RepoLasso.py --help</code> at any point for more information on the available actions and options.
+Use `./RepoLasso.py --help` at any point for more information on the available actions and options.
 {{< /admonition >}}
 
 ## Syncing all org repos

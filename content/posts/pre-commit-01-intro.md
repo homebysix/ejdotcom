@@ -24,7 +24,7 @@ One specific tool I'd like to familiarize more Mac admins with is [pre-commit](h
 This way, you can be confident that any code you write, whether it's Python, shell, plist, yaml, or other file types, always passes a consistent set of tests. **Pre-commit has saved me from many bone-headed mistakes that otherwise would have been preserved in the Git log forever.**
 
 {{< admonition tip "A note about the name" >}}
-It's worth disambiguating the "pre-commit" name here. There are many types of Git hooks, including pre-commit, post-commit, pre-push, and others. The pre-commit <em>hook</em> seems to be the one most often used by developers, which is probably why the pre-commit <em>framework</em> is named as it is. The pre-commit framework <a href="https://pre-commit.com/#pre-commit-install">can manage the other Git hooks</a> as well, if you require them.
+It's worth disambiguating the "pre-commit" name here. There are many types of Git hooks, including pre-commit, post-commit, pre-push, and others. The pre-commit *hook* seems to be the one most often used by developers, which is probably why the pre-commit *framework* is named as it is. The pre-commit framework [can manage the other Git hooks](https://pre-commit.com/#pre-commit-install) as well, if you require them.
 {{< /admonition >}}
 
 There is a [large library of pre-written hooks](https://pre-commit.com/hooks.html) available, and you can also [create your own](https://pre-commit.com/index.html#new-hooks) if you have special conditions you'd like to test for. A few of the pre-commit hooks I repeatedly rely on include:
@@ -177,7 +177,7 @@ git commit -nm "This commit should succeed"
 ```
 
 {{< admonition note "Remote rules still apply" >}}
-Skipping pre-commit hooks locally does not bypass your Git remote host settings. For example, if you have your Git host configured to prohibit pushes to the default branch, or if you have pre-commit configured to run on CI/CD pipelines, bypassing local hooks with <code>-n</code> may not achieve what you want.
+Skipping pre-commit hooks locally does not bypass your Git remote host settings. For example, if you have your Git host configured to prohibit pushes to the default branch, or if you have pre-commit configured to run on CI/CD pipelines, bypassing local hooks with `--no-verify` may not achieve what you want.
 {{< /admonition >}}
 
 ## Collaboration

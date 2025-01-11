@@ -24,16 +24,11 @@ The Munki install and removal steps outlined in yellow are what we'll cover in t
 
 {{< admonition tip "Requirements" >}}
 Before we start, you'll need to have these two requirements set up:
-<ul>
-    <li>
-        <strong>Escrow Buddy must be imported into your Munki repository.</strong>
-        <br /><a href="https://github.com/autopkg/homebysix-recipes/blob/master/Escrow%20Buddy/Escrow%20Buddy.munki.recipe">This AutoPkg recipe</a> is a good way to do that.
-    </li>
-    <li>
-        <strong>Your MDM must set <code>GenerateNewKey</code> to True on Macs that lack a valid FileVault PRK.</strong>
-        <br />See <a href="https://github.com/macadmins/escrow-buddy/wiki/Deployment">this page</a> on the Escrow Buddy wiki for details.
-    </li>
-</ul>
+
+- **Escrow Buddy must be imported into your Munki repository.**  
+    [This AutoPkg recipe](https://github.com/autopkg/homebysix-recipes/blob/master/Escrow%20Buddy/Escrow%20Buddy.munki.recipe) is a good way to do that.
+- **Your MDM must set `GenerateNewKey` to True on Macs that lack a valid FileVault PRK.**  
+    See [this page](https://github.com/macadmins/escrow-buddy/wiki/Deployment) on the Escrow Buddy wiki for details.
 {{< /admonition >}}
 
 ## Munki conditional item
