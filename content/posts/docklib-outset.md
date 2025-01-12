@@ -172,10 +172,9 @@ The following steps provide a template for deploying your script and its depende
 
     {{< admonition tip "AutoPkg recipes available" >}}
     If you're an AutoPkg user, recipes are available to import new versions of these into Munki automatically:
-    <ul>
-        <li><a href="https://github.com/autopkg/grahamgilbert-recipes/tree/master/outset">outset.munki.recipe</a></li>
-        <li><a href="https://github.com/autopkg/natewalck-recipes/tree/main/MacAdminsPython">MacAdminsPython.munki.recipe.yaml</a></li>
-    </ul>
+
+    - [outset.munki.recipe](https://github.com/autopkg/grahamgilbert-recipes/tree/master/outset)
+    - [MacAdminsPython.munki.recipe.yaml](https://github.com/autopkg/natewalck-recipes/tree/main/MacAdminsPython)
     {{< /admonition >}}
 
 1. Rebuild your Munki catalogs.
@@ -235,11 +234,11 @@ The following steps provide a template for deploying your script and its depende
     ![Jamf policy](../images/docklib-outset-jamf-policy.png)
 
     {{< admonition note "Know your triggers" >}}
-    Remember that the timing of the policy only determines when your script, Outset, and Python are <em>installed</em> — not when your script actually runs. Therefore you should <em>not</em> use Jamf's <strong>Login</strong> trigger.
+    Remember that the timing of the policy only determines when your script, Outset, and Python are *installed* — not when your script actually runs. Therefore you should *not* use Jamf's **Login** trigger.
     {{< /admonition >}}
 
     {{< admonition tip "Provisioning helpers" >}}
-    If you use <a href="https://gitlab.com/Mactroll/DEPNotify">DEPNotify</a> or <a href="https://github.com/macadmins/SplashBuddy">SplashBuddy</a> you can set a custom trigger for your policy to ensure it runs during the initial provisioning process.
+    If you use [DEPNotify](https://gitlab.com/Mactroll/DEPNotify) or [SplashBuddy](https://github.com/macadmins/SplashBuddy) you can set a custom trigger for your policy to ensure it runs during the initial provisioning process.
     {{< /admonition >}}
 
 1. Use `sudo jamf policy` to install the items on your test Mac(s).

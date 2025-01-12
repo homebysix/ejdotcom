@@ -89,7 +89,7 @@ My hooks will alert you and stop a commit from happening if any of these errors 
 - Any plist (including in the payload) is incorrectly formatted
 
 {{< admonition note "Note" >}}
-My pre-commit hooks do not verify whether <em>./scripts/preinstall</em> or <em>./scripts/postinstall</em> files are executable, because running <code>munkipkg</code> to build the project <a href="https://github.com/munki/munki-pkg/blob/71d270833719881b0f9f6002a476e716bc232505/munkipkg#L911-L918" target="_blank">will set those files as executable</a> automatically.
+My pre-commit hooks do not verify whether _./scripts/preinstall_ or _./scripts/postinstall_ files are executable, because running `munkipkg` to build the project [will set those files as executable](https://github.com/munki/munki-pkg/blob/71d270833719881b0f9f6002a476e716bc232505/munkipkg#L911-L918) automatically.
 {{< /admonition >}}
 
 If your whole team uses the pre-commit configuration above, the chances of these specific errors creeping into your package source decreases to nearly zero.

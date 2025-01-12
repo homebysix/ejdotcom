@@ -20,7 +20,7 @@ Many possibilities exist for triggering these notifications with various MDMs an
 - **[Enforcement](#enforcement)**
 
 {{< admonition note "Notifications MDM profile" >}}
-In order to display notifications to end users on managed Macs without prompting for user approval first, you will likely need to deploy a MDM profile with the <a href="https://developer.apple.com/documentation/devicemanagement/notifications">Notifications payload</a>. For specific instructions, refer to the documentation of the notification tool you are using (for example, <a href="https://github.com/bartreardon/swiftDialog/wiki/Notifications#approving-and-setting-notification-type-via-mdm">this swiftDialog wiki page</a>).
+In order to display notifications to end users on managed Macs without prompting for user approval first, you will likely need to deploy a MDM profile with the [Notifications payload](https://developer.apple.com/documentation/devicemanagement/notifications). For specific instructions, refer to the documentation of the notification tool you are using (for example, [this swiftDialog wiki page](https://github.com/bartreardon/swiftDialog/wiki/Notifications#approving-and-setting-notification-type-via-mdm)).
 {{< /admonition >}}
 
 ## Gentle notifications

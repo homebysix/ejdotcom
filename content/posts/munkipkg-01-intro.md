@@ -24,7 +24,7 @@ IT and security professionals have needed to install software and other items on
 - **Sane defaults.** MunkiPkg's default settings encourage consistent package receipt identifiers and [semantic versioning](https://semver.org/), and projects are structured in a way that is both understandable and non-proprietary.
 
 {{< admonition tip "A note about the name" >}}
-Don't be fooled: MunkiPkg does <em>not</em> require or depend upon <a href="https://www.munki.org/munki/">Munki</a>. MunkiPkg can be used to create installer packages that work with any software deployment tool that deploys .pkg files, including Munki, <a href="https://www.jamf.com/products/jamf-pro/">Jamf Pro</a>, and many others.
+Don't be fooled: MunkiPkg does *not* require or depend upon [Munki](https://www.munki.org/munki/). MunkiPkg can be used to create installer packages that work with any software deployment tool that deploys .pkg files, including Munki, [Jamf Pro](https://www.jamf.com/products/jamf-pro/), and many others.
 {{< /admonition >}}
 
 ## Walkthrough
@@ -38,7 +38,7 @@ MunkiPkg is a Python script, so my preferred way of "installing" it is to clone 
 Cloning the Git repo instead of just downloading the script itself ensures that you can use `git pull` to get the latest changes when MunkiPkg is updated in the future.
 
 {{< admonition note "note" >}}
-    The steps below use <em>~/Developer</em> to store your sources, but you should adjust that path to wherever you store your source code.
+The steps below use _~/Developer_ to store your sources, but you should adjust that path to wherever you store your source code.
 {{< /admonition >}}
 
 1. Clone the MunkiPkg project from GitHub.

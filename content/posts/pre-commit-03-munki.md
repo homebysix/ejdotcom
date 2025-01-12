@@ -124,7 +124,7 @@ I've chosen to quote all the examples on this page, because although YAML allows
 {{< /admonition >}}
 
 {{< admonition tip "Tip: Ending arguments" >}}
-When including an <code>args</code> list with multi-value arguments, it's a good idea to ensure the final item in the array is <code>--</code>. This <a href="https://www.gnu.org/software/bash/manual/html_node/Shell-Builtin-Commands.html#:~:text=accepts%20%E2%80%98%2D%2D%E2%80%99%20to%20signify%20the%20end%20of%20the%20options">separator</a> tells the command-line interpreter that the list of custom arguments are complete. You'll see this separator used in all the examples in this post that have multi-part arguments.
+When including an `args` list with multi-value arguments, it's a good idea to ensure the final item in the array is `--`. This [separator](https://www.gnu.org/software/bash/manual/html_node/Shell-Builtin-Commands.html#:~:text=accepts%20%E2%80%98%2D%2D%E2%80%99%20to%20signify%20the%20end%20of%20the%20options) tells the command-line interpreter that the list of custom arguments are complete. You'll see this separator used in all the examples in this post that have multi-part arguments.
 {{< /admonition >}}
 
 ### Customizing required keys

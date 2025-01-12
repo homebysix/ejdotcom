@@ -46,7 +46,7 @@ First, you'll configure your runner Mac with the necessary settings and software
 1. Create a non-admin user named __GitLab Runner__, username __gitlabrunner__. Choose a non-trivial password and store the password somewhere secure for your team.
 
     {{< admonition note "Why use a non-admin account?" >}}
-    GitLab jobs executed by this runner will have shell access to your runner Mac. This is why you should avoid using the runner Mac for other work and minimize the privileges granted to the user that will be running the jobs. For more information, see the <a href="https://docs.gitlab.com/runner/security/index.html">Runner Security page of GitLab's documentation</a>.
+    GitLab jobs executed by this runner will have shell access to your runner Mac. This is why you should avoid using the runner Mac for other work and minimize the privileges granted to the user that will be running the jobs. For more information, see the [Runner Security page of GitLab's documentation](https://docs.gitlab.com/runner/security/index.html).
     {{< /admonition >}}
 
 1. Optional: Install [Homebrew](https://brew.sh). This can simplify some of the subsequent installs.
@@ -108,7 +108,7 @@ First, you'll configure your runner Mac with the necessary settings and software
     The output should include `gitlab-runner: Service is running`. If not, pause here and troubleshoot.
 
     {{< admonition tip "Check log permissions" >}}
-    If your runner stops immediately after starting, check that the <strong>gitlabrunner</strong> user has write access to the <code>StandardOutPath</code> and <code>StandardErrPath</code> locations specified in the GitLab runner LaunchAgent.
+    If your runner stops immediately after starting, check that the **gitlabrunner** user has write access to the `StandardOutPath` and `StandardErrPath` locations specified in the GitLab runner LaunchAgent.
     {{< /admonition >}}
 
 1. Restart the runner Mac. (And log in as **gitlabrunner** if needed.) Run `gitlab-runner status` again to verify the runner is working.
@@ -118,7 +118,7 @@ First, you'll configure your runner Mac with the necessary settings and software
 The next part of the process creates the CI configuration file and a script that triggers MunkiPkg builds.
 
 {{< admonition note "Adjust paths if needed" >}}
-The script and CI configuration below assume that your MunkiPkg project folders are all in the root level of your repository. If you put your MunkiPkg projects in a subfolder, you'll need to add another layer to the paths in the <code>for</code> loop in the shell script and the <code>artifacts:paths</code> in the yaml config.
+The script and CI configuration below assume that your MunkiPkg project folders are all in the root level of your repository. If you put your MunkiPkg projects in a subfolder, you'll need to add another layer to the paths in the `for` loop in the shell script and the `artifacts:paths` in the yaml config.
 {{< /admonition >}}
 
 1. In the repository where you store MunkiPkg project sources, create a file called `munkipkg_build.sh` with the following contents:
@@ -183,13 +183,12 @@ I've created a working example repository on GitLab that you can use as a refere
 
 {{< admonition note "Runner maintenance" >}}
 Routine care and feeding of your GitLab runner Mac might include performing the following tasks as a local administrator:
-<ul>
-    <li>Install macOS and Xcode command line tools updates</li>
-    <li>If Homebrew is installed: <code>brew update</code></li>
-    <li><code>pip3 install --upgrade pip PyYAML</code></li>
-    <li><code>cd /Users/Shared/munki-pkg; git fetch; git pull</code></li>
-    <li><a href="https://docs.gitlab.com/runner/install/osx.html#manual-update">GitLab runner updates</a></li>
-</ul>
+
+- Install macOS and Xcode command line tools updates
+- If Homebrew is installed: `brew update`
+- PyYAML upgrades: `pip3 install --upgrade pip PyYAML`
+- Git syncs: `cd /Users/Shared/munki-pkg; git fetch; git pull`
+- [GitLab runner updates](https://docs.gitlab.com/runner/install/osx.html#manual-update)
 {{< /admonition >}}
 
 Now that you've got automation building your packages, you may want to consider creating additional automation that downloads your packages and imports them into your software distribution tool (Munki or Jamf, for example). One way to do this would be to create an override for my [GitLabArtifact family of AutoPkg recipes](https://github.com/autopkg/homebysix-recipes/tree/master/GitLabArtifact). I'll go into more detail on this in a future post.

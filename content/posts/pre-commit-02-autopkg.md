@@ -104,7 +104,7 @@ As of this writing, the list of checks includes:
     ```
 
     {{< admonition tip "End of options delimiter" >}}
-    When using complex pre-commit hook arguments, I tend to include a double-dash (<code>--</code>) as the final argument. In <a href="https://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap12.html#tag_12_02" target="_blank">POSIX shell conventions</a>, the double-dash is used to indicate the end of the option-arguments in a command. Pre-commit passes these arguments to the hook followed by the filenames of the files eligible for testing, so the double-dash offers some additional assurance that the filenames won't be parsed as options.
+    When using complex pre-commit hook arguments, I tend to include a double-dash (`--`) as the final argument. In [POSIX shell conventions](https://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap12.html#tag_12_02), the double-dash is used to indicate the end of the option-arguments in a command. Pre-commit passes these arguments to the hook followed by the filenames of the files eligible for testing, so the double-dash offers some additional assurance that the filenames won't be parsed as options.
     {{< /admonition >}}
 
 Munki recipes that contain `pkginfo` dictionaries within their `Input` section must also pass these tests:
@@ -146,7 +146,7 @@ The additional checks run by strict mode include:
     ```
 
     {{< admonition note "Any name you like" >}}
-    In the example above, <code>Comment</code> is used as the name of the key, but you could use any name as long as it doesn't duplicate other keys in the same dictionary. Keep in mind <code>plutil</code> and <code>plistlib</code> also <em>alphabetize</em> plist keys, so if you want your comment to display in a specific order relative to other keys you could name it accordingly. <code>_Comment</code> would keep it at the top of the dictionary. <code>SomeOtherKey-Comment</code> would keep it sorted next to the <code>SomeOtherKey</code> it comments on.
+    In the example above, `Comment` is used as the name of the key, but you could use any name as long as it doesn't duplicate other keys in the same dictionary. Keep in mind `plutil` and `plistlib` also *alphabetize* plist keys, so if you want your comment to display in a specific order relative to other keys you could name it accordingly. `_Comment` would keep it at the top of the dictionary. `SomeOtherKey-Comment` would keep it sorted next to the `SomeOtherKey` it comments on.
     {{< /admonition >}}
 
 ## Check (or forbid) recipe overrides

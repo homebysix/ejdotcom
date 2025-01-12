@@ -58,7 +58,7 @@ To use the script, you'll need Git and AutoPkg installed.
     {{< admonition tip tip >}}
     Here's a one-liner that will run recently-modified recipes in "check only" mode:
 
-    <pre>find * -iname "*.recipe" -mtime -1 -exec autopkg run -vvcq "{}" '+'</pre>
+        find * -iname "*.recipe" -mtime -1 -exec autopkg run -vvcq "{}" '+'
     {{< /admonition >}}
 
 ### Source code

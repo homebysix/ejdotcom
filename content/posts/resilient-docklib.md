@@ -16,7 +16,7 @@ Recently I needed to perform a time-honored ritual of the modern Mac client syst
 I stumbled onto a couple interesting roadblocks, and I might not be the first or last to do so. To help others (and my future self) maximize the resilience and longevity of their own docklib scripts, I'll share how I overcame these roadblocks, and how I think about creating Dock scripts in general.
 
 {{< admonition tip "Python knowledge helpful but not required" >}}
-In this post I'll use <a href="https://github.com/homebysix/docklib/" target="_blank">docklib</a> to write a Dock configuration script in Python. I'll also include comments that can help you follow along if you aren't familiar with Python. (I often find reading other people's scripts quite helpful when learning a language.)
+In this post I'll use [docklib](https://github.com/homebysix/docklib/) to write a Dock configuration script in Python. I'll also include comments that can help you follow along if you aren't familiar with Python. (I often find reading other people's scripts quite helpful when learning a language.)
 {{< /admonition >}}
 
 ## Contents  <!-- omit in toc -->
@@ -207,7 +207,9 @@ Although you're giving up some control of the items’ order, the main advantage
 To that end: {{% mark %}}Do you want Apple's newly featured apps to be easily discoverable by your users?{{% /mark %}} New major versions of macOS often have new featured applications in the Dock. (Previous examples of such apps have been News, Podcasts, Maps, and TV.) The dynamic example above _will_ allow these featured applications to remain in the Dock untouched.
 
 {{< admonition tip "Dock fixup plist" >}}
-The once-per-user adjustment to the Dock that occurs when logging in to a newly installed or upgraded major macOS version is called a <em>fixup</em>. The plist file that defines the fixup items for the current macOS version can be found here:<br /><code>/System/Library/CoreServices/Dock.app/Contents/Resources/com.apple.dockfixup.plist</code>
+The once-per-user adjustment to the Dock that occurs when logging in to a newly installed or upgraded major macOS version is called a "fixup." The plist file that defines the fixup items for the current macOS version can be found here:
+
+    /System/Library/CoreServices/Dock.app/Contents/Resources/com.apple.dockfixup.plist
 {{< /admonition >}}
 
 ## Skip missing apps
@@ -406,7 +408,7 @@ dock.save()
 
 ### Example: Conditional Dock items based on username  <!-- omit in toc -->
 
-{{% mark %}}Do you need to apply different Docks to specific <em>users</em>?{{% /mark %}} Although the practice is falling out of favor for [very good reasons](https://grahamgilbert.com/blog/2020/11/13/a-pragmatic-approach-to-endpoint-security/), many organizations still maintain a local administrator account for IT support technicians. Such an account might benefit from troubleshooting tools like Activity Monitor, Disk Utility, and Terminal in its Dock. Similar customizations may be beneficial for other single-purpose logins like software builders, audio-video, and wall dashboards.
+{{% mark %}}Do you need to apply different Docks to specific _users_?{{% /mark %}} Although the practice is falling out of favor for [very good reasons](https://grahamgilbert.com/blog/2020/11/13/a-pragmatic-approach-to-endpoint-security/), many organizations still maintain a local administrator account for IT support technicians. Such an account might benefit from troubleshooting tools like Activity Monitor, Disk Utility, and Terminal in its Dock. Similar customizations may be beneficial for other single-purpose logins like software builders, audio-video, and wall dashboards.
 
 This example applies different Dock configurations depending on the current user:
 
