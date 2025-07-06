@@ -1,3 +1,9 @@
+- name: GraphMyTunes
+  url: https://github.com/homebysix/GraphMyTunes
+  description: Python project that produces interesting visualizations and graphs from the metadata in your Apple Music library.
+  roles:
+    - creator
+
 - name: Escrow Buddy
   url: https://github.com/macadmins/escrow-buddy
   description: A tool that helps Security and IT teams ensure they have valid FileVault recovery keys for all their Macs in MDM.
