@@ -1,8 +1,8 @@
 ---
 title: "Using Repo Lasso to Submit Pull Requests in Bulk"
 date: 2024-06-23T16:30:00-0700
-slug: bulk-prs-with-repo-lasso
 description: Detailed example of using Repo Lasso to submit pull requests to a GitHub organization's repositories in bulk.
+slug: repo-lasso
 tags:
     - repo-lasso
     - git

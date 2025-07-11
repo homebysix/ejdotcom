@@ -2,6 +2,7 @@
 title: "Simplifying pkg recipes with AppPkgCreator"
 date: 2021-08-07T22:00:00-07:00
 description: A script that converts eligible AutoPkg pkg recipes to use AppPkgCreator, which can greatly simplify recipes and help with auditing.
+slug: autopkg-apppkgcreator
 tags:
     - autopkg
     - python
