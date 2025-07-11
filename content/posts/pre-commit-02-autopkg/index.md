@@ -19,7 +19,7 @@ In a [previous post](../pre-commit-01-intro), I showed you how to set up [pre-co
 
 Although there are many [pre-commit hooks](https://pre-commit.com/hooks.html) available, I needed something that would understand and parse various file formats and conventions used by Mac admins. So I wrote my own repository of [Mac admin pre-commit hooks](https://github.com/homebysix/pre-commit-macadmin). I've started off with a few AutoPkg, Munki, Jamf, and packaging related hooks, and I'm sure I'll add more over time.
 
-[![pre-commit-macadmin](../images/pre-commit-02-macadmin.png)](https://github.com/homebysix/pre-commit-macadmin)
+[![pre-commit-macadmin](pre-commit-02-macadmin.png)](https://github.com/homebysix/pre-commit-macadmin)
 
 ## Setup
 

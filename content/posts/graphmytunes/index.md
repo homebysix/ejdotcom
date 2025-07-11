@@ -21,7 +21,7 @@ Some simple metadata-driven insights are available in the Music app itself, if y
 
 So I wrote a Python tool to answer those and other questions, and hopefully help other music lovers do the same!
 
-[![GraphMyTunes Logo](../images/graphmytunes-logo.png)](https://github.com/homebysix/GraphMyTunes)
+[![GraphMyTunes Logo](graphmytunes-logo.png)](https://github.com/homebysix/GraphMyTunes)
 
 {{% mark %}}GraphMyTunes is my new open source tool powered by Python and Matplotlib that analyzes your Apple Music library and produces interesting graphs.{{% /mark %}} I've published the project on GitHub at https://github.com/homebysix/GraphMyTunes.
 
@@ -42,31 +42,31 @@ I've included 40+ analysis modules in GraphMyTunes, which output visualizations 
 
 Beyond just the top played songs, GraphMyTunes can show you your favorite albums, artists, or genres by play count.
 
-![](../images/graphmytunes-artist_plays.png) ![](../images/graphmytunes-genre_plays.png)
+![](graphmytunes-artist_plays.png) ![](graphmytunes-genre_plays.png)
 
 ### <span style="font-size: 2rem;">⏱️</span> By total play time
 
 {{% mark %}}But simple play counts don't truly reflect the most important thing you've invested in your music: your time!{{% /mark %}} So GraphMyTunes can also show you which albums, artists, and genres you've spent the most minutes of your life listening to.
 
-![](../images/graphmytunes-album_playtime.png) ![](../images/graphmytunes-genre_playtime.png)
+![](graphmytunes-album_playtime.png) ![](graphmytunes-genre_playtime.png)
 
 ### <span style="font-size: 2rem;">⭐️</span> By average rating
 
 I enjoy using star ratings to classify how I feel about memorable songs. GraphMyTunes aggregates your ratings across albums, artists, and genres to give you insight into which ones are highest-rated on average. (These are some of my favorite graphs, as I think they reveal a less tangible sentiment than play count.)
 
-![](../images/graphmytunes-album_avg_rating.png) ![](../images/graphmytunes-artist_avg_rating.png)
+![](graphmytunes-album_avg_rating.png) ![](graphmytunes-artist_avg_rating.png)
 
 ### <span style="font-size: 2rem;">🧑‍🎤</span> By decade
 
 If the release year of the music in your library is accurate, GraphMyTunes lets you explore which decades of music are most or least represented — by track count, play count, or total play time.
 
-![](../images/graphmytunes-decade_plays.png) ![](../images/graphmytunes-decade_playtime.png)
+![](graphmytunes-decade_plays.png) ![](graphmytunes-decade_playtime.png)
 
 ### <span style="font-size: 2rem;">🔂</span> By average daily plays
 
 Another interesting metric surfaced by GraphMyTunes is the average plays per day between the time you added a song to your library and today. This can also be broken down by album or artist.
 
-![](../images/graphmytunes-album_avg_daily_plays.png) ![](../images/graphmytunes-artist_avg_daily_plays.png)
+![](graphmytunes-album_avg_daily_plays.png) ![](graphmytunes-artist_avg_daily_plays.png)
 
 ### <span style="font-size: 2rem;">🎼</span> ...and many more!
 

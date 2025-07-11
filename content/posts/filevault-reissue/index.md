@@ -17,7 +17,7 @@ When the time came to solve the problem of missing FileVault recovery keys for N
 
 As a former proponent of the password prompt workflow, it's time for me to officially recommend a better path. {{% mark %}}Stop prompting users for their password to escrow new FileVault keys to MDM. Consider switching to Escrow Buddy instead.{{% /mark %}} By doing so, you'd be contributing to a healthier security culture in your organization and saving yourself and your security partners valuable time.
 
-![FileVault reissue password prompt](../images/filevault-reissue-password-prompt.png)
+![FileVault reissue password prompt](filevault-reissue-password-prompt.png)
 
 ## Making the switch
 

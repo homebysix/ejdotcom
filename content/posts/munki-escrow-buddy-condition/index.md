@@ -18,7 +18,7 @@ The main benefit of this workflow is that it minimizes the number of Macs on whi
 
 Once everything is set up and working, the workflow will look like this:
 
-![Munki condition workflow for installing and removing Escrow Buddy](../images/munki-escrow-buddy-condition-workflow.png)
+![Munki condition workflow for installing and removing Escrow Buddy](munki-escrow-buddy-condition-workflow.png)
 
 The Munki install and removal steps outlined in yellow are what we'll cover in this post.
 
