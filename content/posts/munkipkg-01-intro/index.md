@@ -154,8 +154,8 @@ I'll be returning to the [topic of MunkiPkg](/tags/munkipkg) in the future. Unti
 - Greg Neagle: [Introducing MunkiPkg](https://managingosx.wordpress.com/2015/07/28/introducing-munkipkg/)
 - REDline: [Using MunkiPkg](https://redlinetech.wordpress.com/2015/07/31/using-munki-pkg/)
 - Mat X: [Use Munki to install a screensaver](https://macvfx.blog/2019/04/27/use-munki-to-install-a-screensaver/)
-- Josh Hovinetz: [Signing Package Bundle Installers With munkipkg](https://sincerelyjoshin.github.io/signing_package_bundle_installers_with_munkipkg.html)
-- Alan Siu: [Don’t store your munkipkg files in Google Drive File Stream](https://technology.siprep.org/dont-store-your-munkipkg-files-in-google-drive-file-stream/)
+- Josh Hovinetz: [Signing Package Bundle Installers With munkipkg](https://web.archive.org/web/20210301075700/https://sincerelyjoshin.github.io/signing_package_bundle_installers_with_munkipkg.html)
+- Alan Siu: [Don’t store your munkipkg files in Google Drive File Stream](https://web.archive.org/web/20240716005125/https://technology.siprep.org/dont-store-your-munkipkg-files-in-google-drive-file-stream/)
 
 Armin Briegel's book _[Packaging for Apple Administrators](https://scriptingosx.com/packaging-for-apple-administrators/)_ is an excellent resource and dedicates a few pages to MunkiPkg.
 
