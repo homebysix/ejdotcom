@@ -37,10 +37,10 @@ If you'd like to put the ProfileManifestsMirror repository to work for you, here
 1. Navigate to the [ProfileManifestsMirror repository on GitHub](https://github.com/Jamf-Custom-Profile-Schemas/ProfileManifestsMirror).
 
 1. Type `T` and then a portion of the app's domain. Click on the desired manifest, or use the up/down arrows and type **Return** to select.
-    ![Use GitHub file finder to locate a manifest](../images/profilemanifestsmirror-01.png)
+    ![Use GitHub file finder to locate a manifest](profilemanifestsmirror-01.png)
 
 1. Click the **Copy Raw Contents** button.
-    ![Copy raw contents](../images/profilemanifestsmirror-02.png)
+    ![Copy raw contents](profilemanifestsmirror-02.png)
 
 1. Log in to your Jamf web portal and click **Configuration Profiles**, then **New**.
 
@@ -53,13 +53,13 @@ If you'd like to put the ProfileManifestsMirror repository to work for you, here
 1. From the **Source** drop-down menu, choose **Custom Schema**.
 
 1. In the **Preference Domain** field, enter the domain of the app. (For example, `com.tinyspeck.slackmacgap`.)
-    ![Set preference domain and add manifest in Jamf](../images/profilemanifestsmirror-03.png)
+    ![Set preference domain and add manifest in Jamf](profilemanifestsmirror-03.png)
 
 1. Click the **Add Schema** button. In the **Custom Schema** text field, paste the contents of the manifest you copied from GitHub. Click **Save**.
-    ![Add custom manifest](../images/profilemanifestsmirror-04.png)
+    ![Add custom manifest](profilemanifestsmirror-04.png)
 
 1. You should now see appropriate fields and menus for each of the settings in the manifest. Adjust the settings as you desire. Click the **More information** link for any setting, if available, to see detailed documentation. You can also click the **Plist preview** tab to see the text of the resulting plist.
-    ![Profile settings with custom manifest](../images/profilemanifestsmirror-05.png)
+    ![Profile settings with custom manifest](profilemanifestsmirror-05.png)
 
 1. Click **Save** when you're satisfied with your profile. Within a few moments, the settings should apply to any online Macs within your configured scope.
 

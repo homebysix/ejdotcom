@@ -33,7 +33,7 @@ Click on the name of a tool below to see details.
 
 Project URL: https://github.com/IBM/mac-ibm-notifications
 
-![IBM Notifier example screenshot](../images/eb-logout-ibm-notifier.png)
+![IBM Notifier example screenshot](eb-logout-ibm-notifier.png)
 
 ```sh
 #!/bin/bash
@@ -55,7 +55,7 @@ fi
 
 Project URL: https://github.com/bartreardon/swiftDialog
 
-![SwiftDialog example screenshot](../images/eb-swiftdialog.png)
+![SwiftDialog example screenshot](eb-swiftdialog.png)
 
 ```sh
 #!/bin/bash
@@ -69,7 +69,7 @@ Project URL: https://github.com/bartreardon/swiftDialog
 
 Project URL: https://github.com/dataJAR/Notifier
 
-![dataJAR Notifier example screenshot](../images/eb-logout-datajar-notifier.png)
+![dataJAR Notifier example screenshot](eb-logout-datajar-notifier.png)
 
 ```sh
 #!/bin/bash
@@ -85,7 +85,7 @@ NOTIFIER="/Applications/Utilities/Notifier.app/Contents/MacOS/Notifier"
 
 Project URL: https://github.com/julienXX/terminal-notifier
 
-![Terminal Notifier example screenshot](../images/eb-logout-terminal-notifier.png)
+![Terminal Notifier example screenshot](eb-logout-terminal-notifier.png)
 
 ```sh
 #!/bin/bash
@@ -101,7 +101,7 @@ NOTIFIER="/Applications/Utilities/terminal-notifier.app/Contents/MacOS/terminal-
 
 Project URL: https://github.com/sheagcraig/yo
 
-![Yo example screenshot](../images/eb-logout-yo.png)
+![Yo example screenshot](eb-logout-yo.png)
 
 ```sh
 #!/bin/bash
@@ -134,7 +134,7 @@ Alternatively, if your company's MDM tool includes a user-facing app, you could 
 
 For Jamf users, a policy in the Self Service app could inform users of affected Macs that they need to log out in order to escrow a FileVault key to Jamf.
 
-![](../images/eb-logout-self-service.png)
+![](eb-logout-self-service.png)
 
 The smart group criteria used to scope this Self Service policy would be the same as the criteria being used to set `GenerateNewKey` to `true` when deploying Escrow Buddy.
 
@@ -146,7 +146,7 @@ For Munki users, a [nopkg item](https://github.com/munki/munki/wiki/nopkgs) can 
 
 When a Mac matches the eligiblity criteria in the `installcheck_script`, the user would see the following in the **Updates** section of Managed Software Center:
 
-![Managed Software Center - FileVault Escrow Helper](../images/eb-logout-msc.png)
+![Managed Software Center - FileVault Escrow Helper](eb-logout-msc.png)
 
 An example pkginfo file that drives the above workflow is provided below.
 
@@ -171,7 +171,7 @@ One option for this, if you use Munki for software distribution, would be to pai
 
 This produces the messaging shown below, and which will force a logout to occur after the specified time. Note that the time is local to the managed Mac's time zone, despite the `Z` suffix.
 
-![Managed Software Center - FileVault Escrow Helper, Forced](../images/eb-logout-msc-forced.png)
+![Managed Software Center - FileVault Escrow Helper, Forced](eb-logout-msc-forced.png)
 
 ### swiftDialog deferrals
 

@@ -231,7 +231,7 @@ The following steps provide a template for deploying your script and its depende
 
 1. Create a policy that installs all three packages, and set the scope to a group containing one or more test Macs. Set the policy triggers to **Check-In** and **Enrollment**, and the frequency to **Once per computer**.
 
-    ![Jamf policy](../images/docklib-outset-jamf-policy.png)
+    ![Jamf policy](docklib-outset-jamf-policy.png)
 
     {{< admonition note "Know your triggers" >}}
     Remember that the timing of the policy only determines when your script, Outset, and Python are *installed* — not when your script actually runs. Therefore you should *not* use Jamf's **Login** trigger.

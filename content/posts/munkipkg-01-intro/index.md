@@ -110,7 +110,7 @@ Once you've created the project, you'll want to customize the following:
 
     At this point your project will look like this:
 
-    ![MunkiPkg PretendCo Logo Example](../images/munkipkg-01-intro.png)
+    ![MunkiPkg PretendCo Logo Example](munkipkg-01-intro.png)
 
 ### Building the package
 

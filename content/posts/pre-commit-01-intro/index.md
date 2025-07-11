@@ -100,7 +100,7 @@ Don't commit to branch...................................................Failed
 
 The hooks will also affect commits issued by GUI apps like [GitHub Desktop](https://desktop.github.com/) or [Fork](https://fork.dev/):
 
-![GitHub Desktop pre-commit hook fail](../images/pre-commit-01-intro-gh-desktop.png)
+![GitHub Desktop pre-commit hook fail](pre-commit-01-intro-gh-desktop.png)
 
 ## Adding hooks
 

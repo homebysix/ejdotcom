@@ -141,7 +141,7 @@ Then we can edit the _system.login.console.plist_ file as needed.
 
 Because errors in the authorization database can potentially prevent login from succeeding, extra diligence in catching errors is warranted. Login mechanism identifiers follow a predictable format that we can validate:
 
-![PluginName:Mechanism,privileged](../images/authdb-mech-format.png)
+![PluginName:Mechanism,privileged](authdb-mech-format.png)
 
 We can use `grep` to ensure any provided mechanism names match a regular expression:
 

@@ -222,7 +222,7 @@ Repo Lasso includes a convenient reporting feature that lets you keep track of t
 
 The report is produced in Markdown format, and looks like this when rendered:
 
-![Repo Lasso Report](../images/repo-lasso-report.png)
+![Repo Lasso Report](repo-lasso-report.png)
 
 If any pull requests show status "conflict," you can click to view them in a browser and see what action you can take to help the repo authors resolve.
 

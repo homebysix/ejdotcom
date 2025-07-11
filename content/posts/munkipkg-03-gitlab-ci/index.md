@@ -167,11 +167,11 @@ touch munki_kickstart/payload/Users/Shared/.com.googlecode.munki.checkandinstall
 
 1. There should be a small "download" icon for the most recent job. Click the icon to download the artifacts zip file.
 
-    ![Download Artifact Icon](../images/munkipkg-03-gitlab-ci-download.png)
+    ![Download Artifact Icon](munkipkg-03-gitlab-ci-download.png)
 
 1. Unzip the artifacts file and you'll see a package for each of your MunkiPkg projects.
 
-    ![Artifact Contents](../images/munkipkg-03-gitlab-ci-unzip.png)
+    ![Artifact Contents](munkipkg-03-gitlab-ci-unzip.png)
 
 ## Example repository
 

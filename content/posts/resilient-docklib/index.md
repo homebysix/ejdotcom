@@ -41,7 +41,7 @@ I acknowledge that the full process of managing your fleet's Dock configuration 
 
 Before diving into coding a Dock script, one question should always be answered first: {{% mark %}}Will your management of Dock configurations provide a clear benefit to your users?{{% /mark %}} If the answer to this question is no, then stop here. (Congratulations, you've just saved yourself and your colleagues a fair bit of time.)
 
-![Default macOS Dock](../images/default-dock.png)
+![Default macOS Dock](default-dock.png)
 
 Apple's selection of items included in default macOS Docks is far from unreasonable. All the basics are included: a good web browser, many productivity apps, media storage and entertainment, system settings, and avenues for finding more apps. When choosing to manage the Dock (or any other manageable setting), IT administrators should be confident they are improving the user experience, not simply codifying their own personal preferences.
 
@@ -288,7 +288,7 @@ Another very important consideration: {{% mark %}}What language will your users 
 
 Specifically: using a Dock item's "label" to perform find/replace/remove operations will be unreliable if the logged-in user isn't using the language you're writing for. To illustrate, here's the Messages app label in Big Sur when Spanish is selected as the system language:
 
-![Mensajes](../images/resilient-docklib-mensajes.png)
+![Mensajes](resilient-docklib-mensajes.png)
 
 If we take a look at the (truncated) plist data available for the Messages Dock item, we can see that although the label has been localized for the selected language, the filesystem path (represented by `_CFURLString`) remains unchanged:
 
