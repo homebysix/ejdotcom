@@ -408,7 +408,7 @@ dock.save()
 
 ### Example: Conditional Dock items based on username  <!-- omit in toc -->
 
-{{% mark %}}Do you need to apply different Docks to specific _users_?{{% /mark %}} Although the practice is falling out of favor for [very good reasons](https://grahamgilbert.com/blog/2020/11/13/a-pragmatic-approach-to-endpoint-security/), many organizations still maintain a local administrator account for IT support technicians. Such an account might benefit from troubleshooting tools like Activity Monitor, Disk Utility, and Terminal in its Dock. Similar customizations may be beneficial for other single-purpose logins like software builders, audio-video, and wall dashboards.
+{{% mark %}}Do you need to apply different Docks to specific _users_?{{% /mark %}} Although the practice is falling out of favor for [very good reasons](https://web.archive.org/web/20210412180259/https://grahamgilbert.com/blog/2020/11/13/a-pragmatic-approach-to-endpoint-security/), many organizations still maintain a local administrator account for IT support technicians. Such an account might benefit from troubleshooting tools like Activity Monitor, Disk Utility, and Terminal in its Dock. Similar customizations may be beneficial for other single-purpose logins like software builders, audio-video, and wall dashboards.
 
 This example applies different Dock configurations depending on the current user:
 
