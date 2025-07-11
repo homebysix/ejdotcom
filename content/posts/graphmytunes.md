@@ -1,5 +1,5 @@
 ---
-title: Introducing GraphMyTunes
+title: 'GraphMyTunes: a new tool for visualizing your Apple Music library'
 date: 2025-07-06T06:00:00-0700
 description: Users of Apple Music (formerly iTunes) may be interested in my new Python-powered tool that generates insightful graphs and visualizations of your music library.
 slug: graphmytunes

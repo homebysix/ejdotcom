@@ -5,3 +5,7 @@
 /photographer /
 /sftour /
 /traveler /
+
+# Redirect renamed posts
+/posts/bulk-prs-with-repo-lasso/ /posts/repo-lasso/ 301
+/posts/simplifying-pkg-recipes-with-apppkgcreator/ /posts/autopkg-apppkgcreator/ 301
