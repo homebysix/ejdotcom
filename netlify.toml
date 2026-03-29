@@ -1,4 +1,4 @@
 [context.production.environment]
-  HUGO_VERSION = "0.140.2"
+  HUGO_VERSION = "0.157.0"
 [context.deploy-preview.environment]
-  HUGO_VERSION = "0.140.2"
+  HUGO_VERSION = "0.157.0"

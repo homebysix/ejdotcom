@@ -652,7 +652,6 @@ import shutil
 from datetime import datetime
 from docklib import Dock
 
-
 # Load current Dock
 dock = Dock()
 
