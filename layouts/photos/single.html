@@ -1,0 +1,111 @@
+{{ partial "header.html" . }}
+
+<style>
+div.main.column {
+  max-width: 1200px;
+}
+.photo-single-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 20px;
+}
+.photo-single-meta {
+  margin-top: 20px;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+.photo-single-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: -0.005rem;
+  margin-bottom: 6px;
+}
+.photo-single-info {
+  font-size: 14px;
+  color: #666;
+}
+.photo-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 32px;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 14px;
+  border-top: 1px solid #e8e8e8;
+  padding-top: 20px;
+}
+.photo-nav a {
+  color: #527fc1;
+  text-decoration: none;
+}
+.photo-nav a:hover {
+  text-decoration: underline;
+}
+.photo-nav-prev,
+.photo-nav-next {
+  min-width: 100px;
+}
+.photo-nav-next {
+  text-align: right;
+}
+.photo-nav-center {
+  text-align: center;
+  color: #888;
+}
+.photo-nav-center a {
+  color: #888;
+}
+</style>
+
+<div class="main column">
+  <div class="container">
+    <div class="content">
+      {{ $img := .Resources.GetMatch "photo.*" }}
+      {{ if $img }}
+        {{ $full := $img.Resize "1800x webp q85" }}
+        <img class="photo-single-img" src="{{ $full.RelPermalink }}" alt="{{ .Title }}">
+      {{ end }}
+      <div class="photo-single-meta">
+        <div class="photo-single-title">{{ .Title }}</div>
+        <div class="photo-single-info">
+          {{ .Date.Format "January 2, 2006" }}{{ with .Params.location }} &middot; {{ . }}{{ end }}
+        </div>
+      </div>
+      <nav class="photo-nav"
+        data-prev="{{ with .PrevInSection }}{{ .RelPermalink }}{{ end }}"
+        data-next="{{ with .NextInSection }}{{ .RelPermalink }}{{ end }}">
+        <div class="photo-nav-prev">
+          {{ with .PrevInSection }}
+            <a href="{{ .RelPermalink }}">&#8592; {{ .Title }}</a>
+          {{ end }}
+        </div>
+        <div class="photo-nav-center">
+          <a href="{{ "/photos/" | relURL }}">&#8593; Return to Gallery</a>
+        </div>
+        <div class="photo-nav-next">
+          {{ with .NextInSection }}
+            <a href="{{ .RelPermalink }}">{{ .Title }} &#8594;</a>
+          {{ end }}
+        </div>
+      </nav>
+    </div>
+  </div>
+</div>
+
+<script>
+(function() {
+  var nav = document.querySelector('.photo-nav');
+  if (!nav) return;
+  var prev = nav.getAttribute('data-prev');
+  var next = nav.getAttribute('data-next');
+  document.addEventListener('keydown', function(e) {
+    if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
+    if (e.key === 'ArrowLeft' && prev) window.location.href = prev;
+    if (e.key === 'ArrowRight' && next) window.location.href = next;
+  });
+})();
+</script>
+
+{{ partial "footer.html" . }}
