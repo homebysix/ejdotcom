@@ -3,8 +3,6 @@ baseURL: "https://www.elliotjordan.com/" # include trailing slash
 languageCode: "en-us"
 author: "Elliot Jordan"
 theme: "cocoa-ej"
-pygmentsCodeFences: true
-PygmentsStyle: "emacs"
 # disableKinds: ["RSS"]
 googleAnalytics: "G-DZP38PR22E"
 
@@ -62,7 +60,7 @@ params:
 
 # https://gohugo.io/getting-started/configuration-markup#highlight
 markup:
-  markup.highlight:
+  highlight:
     codeFences: true
     guessSyntax: false
     hl_Lines: ""
