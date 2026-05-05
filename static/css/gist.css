@@ -1,0 +1,21 @@
+/* Define font-stack custom properties that GitHub's gist-embed.css
+   references but does not declare (they normally live in primer-primitives,
+   which is not loaded by the embed). Without these, monospace declarations
+   inside .gist resolve to an empty value and content falls back to the
+   inherited site font. The monospace stack matches fenced code blocks. */
+.gist {
+  --fontStack-monospace: 'Menlo', monospace;
+  --fontStack-system: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif;
+  --fontStack-sansSerif: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif;
+}
+
+/* Match fenced code block sizing. GitHub's embed uses
+   var(--text-body-size-small) which also resolves to nothing here.
+   !important is needed because gist-embed.css is document.write'd
+   into the body, so it loses on selector specificity ties via source
+   order even though we load first. */
+.gist .blob-code-inner,
+.gist .blob-num {
+  font-size: 0.9rem !important;
+  line-height: 1.5em !important;
+}

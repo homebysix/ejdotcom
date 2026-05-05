@@ -34,6 +34,9 @@ params:
   githubRepo: "homebysix/ejdotcom"
   gitBranch: main
 
+  extracssfiles:
+    - "/css/gist.css"
+
   colors:
     identifier: "#527fc1"
     identifier_darkmode: "#ccc"
