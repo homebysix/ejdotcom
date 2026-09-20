@@ -4,6 +4,12 @@
   roles:
     - creator
 
+- name: MacAdmins.org Community Calendar
+  url: https://macadmins.org/calendar/
+  description: Crowd-sourced calendar of Mac admin community events, industry conferences, and worldwide meetups, powered by a [GitHub](https://github.com/macadminsdotorg/macadmins-calendar)-hosted events file.
+  roles:
+    - co-creator
+
 - name: Escrow Buddy
   url: https://github.com/macadmins/escrow-buddy
   description: A tool that helps Security and IT teams ensure they have valid FileVault recovery keys for all their Macs in MDM.
